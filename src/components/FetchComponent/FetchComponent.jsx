@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 const FetchComponent = () => {
   const [query, setQuery] = useState("");
   const [link, setLink] = useState({});
+
+  const { register, errors } = useForm();
 
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
@@ -46,22 +49,20 @@ const FetchComponent = () => {
     setQuery(e.target.value);
   };
 
-  /*   const result = link.map((data) => {
-    console.log(data);
-    return (
-      <p>
-        {data.url} - {data.shortenUrl}
-      </p>
-    );
-  }); */
-
   return (
     <form onSubmit={handleSubmit}>
+      <label>Shorten Your Link *</label>
+
       <input
         onChange={handleChange}
+        name="linkShortener"
+        placeholder="Enter Link Here..."
         type="text"
-        placeholder="Shorten a link here..."
+        ref={register({ required: true })}
       />
+
+      {errors.linkShortener && <span>Link is required</span>}
+
       <button type="submit">Shorten It</button>
       <p>{link.shortenUrl}</p>
     </form>
