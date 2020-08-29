@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import { Button } from "../common/Button";
 
 localStorage.setItem("links", JSON.stringify([]));
 /* const a = [];
@@ -75,7 +77,7 @@ const FetchComponent = () => {
         ref={register({ required: true })}
       />
 
-      <button type="submit"> Shorten Link </button>
+      <Button type="submit"> Shorten Link </Button>
       {loading && <p>Shortening Your Long Link...</p>}
 
       {errors.linkShortener && <p>Link is required</p>}
