@@ -6,14 +6,23 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { Button, Input } from "../../components/common";
 
+import "../../images/bg-shorten-desktop.svg";
+
 const Form = styled.form`
   justify-content: center;
   align-items: center;
   margin: auto;
   margin-top: 50vh;
+  max-height: 80%;
   max-width: 70%;
-  background: #3a3054;
 
+  background-image: url("bg-shorten-desktop.svg"); /* The image used */
+  height: 5rem; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+  background: #3a3054;
   padding: 30px;
   color: black;
   border-radius: 6px;
@@ -41,14 +50,95 @@ const Form = styled.form`
     color: red;
     margin-left: 0.5rem;
   }
+`;
 
-  .result-container {
-    display: flex;
-    flex-direction: row;
+const Results = styled.form`
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-top: 2rem;
+  max-width: 70%;
+  padding: 30px;
+  color: black;
+  border-radius: 6px;
+
+  .text-color {
+    color: #59d1d0;
+    margin-left: 0.5rem;
+  }
+
+  .short-link {
+    margin-left: 3rem;
   }
 
   .copy-icon {
     margin: 1.2rem;
+  }
+
+  .jello-horizontal {
+    -webkit-animation: jello-horizontal 1.5s both;
+    animation: jello-horizontal 1.5s both;
+  }
+
+  @-webkit-keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+  @keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+      transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+      transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+      transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+      transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
   }
 `;
 
@@ -115,31 +205,35 @@ const FetchComponent = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)}>
-      <Input
-        name="linkShortener"
-        placeholder="Shorten Link Here..."
-        type="text"
-        ref={register({ required: true })}
-      />
+    <>
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Input
+          name="linkShortener"
+          placeholder="Shorten Link Here..."
+          type="text"
+          ref={register({ required: true })}
+        />
 
-      <Button type="submit"> Shorten Link </Button>
-      {loading && <p className="text-color">Shortening Your Long Link...</p>}
+        <Button type="submit"> Shorten Link </Button>
+        {loading && <p className="text-color">Shortening Your Long Link...</p>}
+      </Form>
 
-      <div className="result-container">
-        <p className="text-color">{link.shortenUrl}</p>
+      <Results>
+        <p>{link.url}</p>
+
+        <p className="short-link text-color">{link.shortenUrl}</p>
 
         {link.shortenUrl && (
           <CopyToClipboard text={link.shortenUrl}>
-            <i className="text-color copy-icon fas fa-copy"></i>
+            <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
           </CopyToClipboard>
         )}
 
         {errors.linkShortener && (
           <p className="error-text">Please add a link.</p>
         )}
-      </div>
-    </Form>
+      </Results>
+    </>
   );
 };
 
