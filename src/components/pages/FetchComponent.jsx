@@ -14,9 +14,7 @@ const Form = styled.form`
   max-width: 70%;
   background: #3a3054;
 
-  /* border: 1px solid #eee; */
   padding: 30px;
-  /* box-sizing: border-box; */
   color: black;
   border-radius: 6px;
 
@@ -42,6 +40,15 @@ const Form = styled.form`
   .error-text {
     color: red;
     margin-left: 0.5rem;
+  }
+
+  .result-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .copy-icon {
+    margin: 1.2rem;
   }
 `;
 
@@ -119,15 +126,19 @@ const FetchComponent = () => {
       <Button type="submit"> Shorten Link </Button>
       {loading && <p className="text-color">Shortening Your Long Link...</p>}
 
-      <p className="text-color">{link.shortenUrl}</p>
+      <div className="result-container">
+        <p className="text-color">{link.shortenUrl}</p>
 
-      {link.shortenUrl && (
-        <CopyToClipboard text={link.shortenUrl}>
-          <i className="text-color copy-icon fas fa-copy"></i>
-        </CopyToClipboard>
-      )}
+        {link.shortenUrl && (
+          <CopyToClipboard text={link.shortenUrl}>
+            <i className="text-color copy-icon fas fa-copy"></i>
+          </CopyToClipboard>
+        )}
 
-      {errors.linkShortener && <p className="error-text">Please add a link.</p>}
+        {errors.linkShortener && (
+          <p className="error-text">Please add a link.</p>
+        )}
+      </div>
     </Form>
   );
 };
