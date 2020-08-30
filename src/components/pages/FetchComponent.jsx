@@ -1,8 +1,49 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import { Button } from "../common/Button";
+
+import { Button, Input } from "../../components/common";
+
+const Form = styled.form`
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 50vh;
+  max-width: 70%;
+  background: #3a3054;
+
+  /* border: 1px solid #eee; */
+  padding: 30px;
+  /* box-sizing: border-box; */
+  color: black;
+  border-radius: 6px;
+
+  > ${Button}:first-of-type {
+    float: right;
+    width: 10rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.9rem;
+  }
+
+  > ${Input} {
+    margin-top: 1rem;
+    padding: 1.4rem;
+    width: 80%;
+  }
+
+  .text-color {
+    color: #59d1d0;
+    margin-left: 0.5rem;
+  }
+
+  .error-text {
+    color: red;
+    margin-left: 0.5rem;
+  }
+`;
 
 localStorage.setItem("links", JSON.stringify([]));
 /* const a = [];
@@ -67,29 +108,27 @@ const FetchComponent = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Shorten Your Link *</label>
-
-      <input
+    <Form onSubmit={handleSubmit(onSubmit)}>
+      <Input
         name="linkShortener"
-        placeholder="Enter Link Here..."
+        placeholder="Shorten Link Here..."
         type="text"
         ref={register({ required: true })}
       />
 
       <Button type="submit"> Shorten Link </Button>
-      {loading && <p>Shortening Your Long Link...</p>}
+      {loading && <p className="text-color">Shortening Your Long Link...</p>}
 
-      {errors.linkShortener && <p>Link is required</p>}
-
-      <p>{link.shortenUrl}</p>
+      <p className="text-color">{link.shortenUrl}</p>
 
       {link.shortenUrl && (
         <CopyToClipboard text={link.shortenUrl}>
-          <i className="fas fa-copy"></i>
+          <i className="text-color copy-icon fas fa-copy"></i>
         </CopyToClipboard>
       )}
-    </form>
+
+      {errors.linkShortener && <p className="error-text">Please add a link.</p>}
+    </Form>
   );
 };
 

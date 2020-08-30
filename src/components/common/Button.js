@@ -25,9 +25,10 @@ const Button = styled.button`
   ${largeStyles}
   box-shadow: none;
   border: none;
-  width: 100%;
+  width: 30%;
   display: block;
   white-space: none;
+  padding: 0.8rem;
 
   &:disabled {
     background: #eee;
