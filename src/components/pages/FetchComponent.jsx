@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import { useForm } from "react-hook-form";
@@ -54,7 +54,7 @@ const Form = styled.form`
 
 const Results = styled.form`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: auto;
   margin-top: 2rem;
   max-width: 70%;
@@ -142,18 +142,13 @@ const Results = styled.form`
   }
 `;
 
-localStorage.setItem("links", JSON.stringify([]));
-/* const a = [];
-a.push(JSON.parse(localStorage.getItem("links")));
- */
-const SaveDataToLocalStorage = (data) => {
+/* localStorage.setItem("links", JSON.stringify([]));
+ */ const SaveDataToLocalStorage = (data) => {
   let a = [];
   // Parse the serialized data back into an aray of objects
   a = JSON.parse(localStorage.getItem("links")) || [];
   // Push the new data (whether it be an object or anything else) onto the array
   a.push(data);
-  // Alert the array value
-  alert(a); // Should be something like [Object array]
   // Re-serialize the array back into a string and store it in localStorage
   localStorage.setItem("links", JSON.stringify(a));
 };
@@ -161,6 +156,12 @@ const SaveDataToLocalStorage = (data) => {
 const FetchComponent = () => {
   const [link, setLink] = useState({});
   const [loading, setLoading] = useState(false);
+  const [links, setLinks] = useState([]);
+
+  useEffect(() => {
+    setLinks(JSON.parse(localStorage.getItem("links") || []));
+  }, []);
+  console.log(links);
 
   const { register, errors, handleSubmit } = useForm();
 
@@ -216,22 +217,28 @@ const FetchComponent = () => {
 
         <Button type="submit"> Shorten Link </Button>
         {loading && <p className="text-color">Shortening Your Long Link...</p>}
-      </Form>
-
-      <Results>
-        <p>{link.url}</p>
-
-        <p className="short-link text-color">{link.shortenUrl}</p>
-
-        {link.shortenUrl && (
-          <CopyToClipboard text={link.shortenUrl}>
-            <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
-          </CopyToClipboard>
-        )}
 
         {errors.linkShortener && (
           <p className="error-text">Please add a link.</p>
         )}
+      </Form>
+
+      <Results>
+        {links.map((data) => {
+          return (
+            <>
+              <p>{link.url}</p>
+
+              <p className="short-link text-color">{link.shortenUrl}</p>
+
+              {link.shortenUrl && (
+                <CopyToClipboard text={link.shortenUrl}>
+                  <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
+                </CopyToClipboard>
+              )}
+            </>
+          );
+        })}
       </Results>
     </>
   );
