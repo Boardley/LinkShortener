@@ -142,13 +142,17 @@ const Results = styled.form`
   }
 `;
 
-/* localStorage.setItem("links", JSON.stringify([]));
- */ const SaveDataToLocalStorage = (data) => {
+/* Saving in Local Storage
+ */
+const SaveDataToLocalStorage = (data) => {
   let a = [];
   // Parse the serialized data back into an aray of objects
   a = JSON.parse(localStorage.getItem("links")) || [];
   // Push the new data (whether it be an object or anything else) onto the array
-  a.push(data);
+  if (a.length >= 5) {
+    a.pop();
+  }
+  a.unshift(data);
   // Re-serialize the array back into a string and store it in localStorage
   localStorage.setItem("links", JSON.stringify(a));
 };
@@ -158,10 +162,17 @@ const FetchComponent = () => {
   const [loading, setLoading] = useState(false);
   const [links, setLinks] = useState([]);
 
+  const readingLinks = () => {
+    setLinks(JSON.parse(localStorage.getItem("links")) || []);
+  };
+
   useEffect(() => {
-    setLinks(JSON.parse(localStorage.getItem("links") || []));
+    readingLinks();
   }, []);
-  console.log(links);
+
+  useEffect(() => {
+    readingLinks();
+  }, [link]);
 
   const { register, errors, handleSubmit } = useForm();
 
@@ -195,9 +206,9 @@ const FetchComponent = () => {
           url: result.url,
           shortenUrl: `https://rel.ink/${result.hashid}`,
         };
+        SaveDataToLocalStorage(newUrl);
         setLink(newUrl);
         setLoading(false);
-        SaveDataToLocalStorage(newUrl);
       })
       .catch((error) => {
         console.log("Error: ", error);
@@ -227,12 +238,12 @@ const FetchComponent = () => {
         {links.map((data) => {
           return (
             <>
-              <p>{link.url}</p>
+              <p>{data.url.toString().substr(0, 30)}...</p>
 
-              <p className="short-link text-color">{link.shortenUrl}</p>
+              <p className="short-link text-color">{data.shortenUrl}</p>
 
               {link.shortenUrl && (
-                <CopyToClipboard text={link.shortenUrl}>
+                <CopyToClipboard text={data.shortenUrl}>
                   <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
                 </CopyToClipboard>
               )}
