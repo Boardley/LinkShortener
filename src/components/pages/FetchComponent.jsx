@@ -1,149 +1,9 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-import { Button, Input } from "../../components/common";
-
-import "../../images/bg-shorten-desktop.svg";
-
-const Form = styled.form`
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  margin-top: 50vh;
-  max-height: 80%;
-  max-width: 70%;
-
-  background-image: url("bg-shorten-desktop.svg"); /* The image used */
-  height: 5rem; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-
-  background: #3a3054;
-  padding: 30px;
-  color: black;
-  border-radius: 6px;
-
-  > ${Button}:first-of-type {
-    float: right;
-    width: 10rem;
-    margin: auto;
-    margin-top: 1rem;
-    padding: 0.9rem;
-  }
-
-  > ${Input} {
-    margin-top: 1rem;
-    padding: 1.4rem;
-    width: 80%;
-  }
-
-  .text-color {
-    color: #59d1d0;
-    margin-left: 0.5rem;
-  }
-
-  .error-text {
-    color: red;
-    margin-left: 0.5rem;
-  }
-`;
-
-const Results = styled.form`
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 2rem;
-  max-width: 70%;
-  padding: 30px;
-  color: black;
-  border-radius: 6px;
-
-  .text-color {
-    color: #59d1d0;
-    margin-left: 0.5rem;
-  }
-
-  .short-link {
-    margin-left: 3rem;
-  }
-
-  .copy-icon {
-    margin: 1.2rem;
-  }
-
-  .jello-horizontal {
-    -webkit-animation: jello-horizontal 1.5s both;
-    animation: jello-horizontal 1.5s both;
-  }
-
-  @-webkit-keyframes jello-horizontal {
-    0% {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-    30% {
-      -webkit-transform: scale3d(1.25, 0.75, 1);
-      transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-      -webkit-transform: scale3d(0.75, 1.25, 1);
-      transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-      -webkit-transform: scale3d(1.15, 0.85, 1);
-      transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-      -webkit-transform: scale3d(0.95, 1.05, 1);
-      transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-      -webkit-transform: scale3d(1.05, 0.95, 1);
-      transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
-  @keyframes jello-horizontal {
-    0% {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-    30% {
-      -webkit-transform: scale3d(1.25, 0.75, 1);
-      transform: scale3d(1.25, 0.75, 1);
-    }
-    40% {
-      -webkit-transform: scale3d(0.75, 1.25, 1);
-      transform: scale3d(0.75, 1.25, 1);
-    }
-    50% {
-      -webkit-transform: scale3d(1.15, 0.85, 1);
-      transform: scale3d(1.15, 0.85, 1);
-    }
-    65% {
-      -webkit-transform: scale3d(0.95, 1.05, 1);
-      transform: scale3d(0.95, 1.05, 1);
-    }
-    75% {
-      -webkit-transform: scale3d(1.05, 0.95, 1);
-      transform: scale3d(1.05, 0.95, 1);
-    }
-    100% {
-      -webkit-transform: scale3d(1, 1, 1);
-      transform: scale3d(1, 1, 1);
-    }
-  }
-`;
-
-/* Saving in Local Storage
- */
+/* Saving in Local Storage */
 const SaveDataToLocalStorage = (data) => {
   let a = [];
   // Parse the serialized data back into an aray of objects
@@ -218,29 +78,29 @@ const FetchComponent = () => {
 
   return (
     <>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
           name="linkShortener"
           placeholder="Shorten Link Here..."
           type="text"
           ref={register({ required: true })}
         />
 
-        <Button type="submit"> Shorten Link </Button>
+        <button type="submit"> Shorten Link </button>
         {loading && <p className="text-color">Shortening Your Long Link...</p>}
 
         {errors.linkShortener && (
           <p className="error-text">Please add a link.</p>
         )}
-      </Form>
+      </form>
 
-      <Results>
+      <div>
         {links.map((data) => {
           return (
             <>
               <p>{data.url.toString().substr(0, 30)}...</p>
 
-              <p className="short-link text-color">{data.shortenUrl}</p>
+              <p>{data.shortenUrl}</p>
 
               {link.shortenUrl && (
                 <CopyToClipboard text={data.shortenUrl}>
@@ -250,9 +110,8 @@ const FetchComponent = () => {
             </>
           );
         })}
-      </Results>
+      </div>
     </>
   );
 };
-
 export default FetchComponent;
