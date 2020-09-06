@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
+import { PageLayout } from "../common/PageLayout";
+
 /* Saving in Local Storage */
 const SaveDataToLocalStorage = (data) => {
   let a = [];
@@ -77,7 +79,7 @@ const FetchComponent = () => {
   };
 
   return (
-    <>
+    <PageLayout>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           name="linkShortener"
@@ -102,16 +104,19 @@ const FetchComponent = () => {
 
               <p>{data.shortenUrl}</p>
 
-              {link.shortenUrl && (
-                <CopyToClipboard text={data.shortenUrl}>
-                  <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
-                </CopyToClipboard>
-              )}
+              <p>
+                {" "}
+                {link.shortenUrl && (
+                  <CopyToClipboard text={data.shortenUrl}>
+                    <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
+                  </CopyToClipboard>
+                )}
+              </p>
             </>
           );
         })}
       </div>
-    </>
+    </PageLayout>
   );
 };
 export default FetchComponent;
