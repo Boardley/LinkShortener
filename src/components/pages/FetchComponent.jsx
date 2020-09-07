@@ -105,8 +105,7 @@ const FetchComponent = () => {
               <p>{data.shortenUrl}</p>
 
               <p>
-                {" "}
-                {link.shortenUrl && (
+                {data.shortenUrl && (
                   <CopyToClipboard text={data.shortenUrl}>
                     <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
                   </CopyToClipboard>
