@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import styled from "styled-components";
 
 import { PageLayout } from "../common/PageLayout";
 
@@ -78,10 +78,22 @@ const FetchComponent = () => {
       });
   };
 
+  const Form = styled.form`
+    border: dotted pink 0.1rem;
+    height: 5rem;
+    width: 100%;
+  `;
+
+  const Input = styled.input`
+    border: dotted yellowgreen 0.1rem;
+    width: 50%;
+    justify-items: center;
+  `;
+
   return (
     <PageLayout>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
+      <Form onSubmit={handleSubmit(onSubmit)}>
+        <Input
           name="linkShortener"
           placeholder="Shorten Link Here..."
           type="text"
@@ -94,7 +106,7 @@ const FetchComponent = () => {
         {errors.linkShortener && (
           <p className="error-text">Please add a link.</p>
         )}
-      </form>
+      </Form>
 
       <div>
         {links.map((data) => {
