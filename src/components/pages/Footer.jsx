@@ -19,6 +19,30 @@ const Wrapper = styled.div`
   color: white;
 
   /*  Media Queries  */
+  @media (min-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    height: 101vh;
+    text-align: center;
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    height: 101vh;
+    text-align: center;
+  }
+
+  @media (min-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    height: 101vh;
+    text-align: center;
+    width: 106.6vw;
+  }
 `;
 
 const ImgCont = styled.div`

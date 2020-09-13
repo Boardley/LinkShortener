@@ -18,6 +18,9 @@ const Wrapper = styled.div`
   background-size: cover; /* Resize the background image to cover the entire container */
 
   /*  Media Queries  */
+  @media (min-width: 500px) {
+    width: 106.6vw;
+  }
 `;
 
 const StyledLink = styled.button`

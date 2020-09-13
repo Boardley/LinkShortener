@@ -97,6 +97,21 @@ const FetchComponent = () => {
       width: 101.6vw;
       margin-left: -2rem;
     }
+
+    @media (min-width: 700px) {
+      width: 101.6vw;
+      margin-left: -2rem;
+    }
+
+    @media (min-width: 600px) {
+      width: 103.6vw;
+      margin-left: -2rem;
+    }
+
+    @media (min-width: 500px) {
+      width: 108.6vw;
+      margin-left: -2rem;
+    }
   `;
 
   const Form = styled.form`
@@ -114,6 +129,19 @@ const FetchComponent = () => {
     @media (min-width: 800px) {
       width: 76%;
     }
+
+    @media (min-width: 700px) {
+      width: 85%;
+    }
+
+    @media (min-width: 600px) {
+      width: 76%;
+    }
+
+    @media (min-width: 500px) {
+      flex-direction: column;
+      width: 70%;
+    }
   `;
 
   const Input = styled.input`
@@ -122,6 +150,12 @@ const FetchComponent = () => {
     height: 2.5rem;
     padding-left: 1rem;
     outline: none;
+
+    @media (min-width: 500px) {
+      margin-bottom: 0.5rem;
+      width: 90%;
+      height: 70%;
+    }
   `;
 
   const InputText = styled.p`
@@ -153,6 +187,11 @@ const FetchComponent = () => {
     outline: none;
     border: none;
     cursor: pointer;
+
+    @media (min-width: 500px) {
+      width: 95%;
+      height: 72%;
+    }
   `;
 
   const ResultsContainer = styled.div`
@@ -169,6 +208,20 @@ const FetchComponent = () => {
     @media (min-width: 800px) {
       width: 40rem;
     }
+
+    @media (min-width: 700px) {
+      width: 39rem;
+    }
+
+    @media (min-width: 600px) {
+      width: 31rem;
+      flex-direction: column;
+    }
+
+    @media (min-width: 500px) {
+      width: 25rem;
+      flex-direction: column;
+    }
   `;
 
   const ShortContainer = styled.div`
@@ -178,8 +231,15 @@ const FetchComponent = () => {
 
   const ShortURL = styled.p`
     margin-left: -18%;
-
     color: #5ad2cf;
+
+    @media (min-width: 600px) {
+      margin-left: 0%;
+    }
+
+    @media (min-width: 500px) {
+      margin-left: 0%;
+    }
   `;
 
   const CopyIcon = styled.p`

@@ -25,6 +25,21 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 /* const Line = styled.div`
@@ -38,6 +53,16 @@ const Cont1 = styled.div`
   width: 20rem;
   height: 12rem;
   padding: 1rem;
+
+  @media (min-width: 700px) {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  @media (min-width: 600px) {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
 `;
 
 const Cont2 = styled.div`
@@ -53,6 +78,10 @@ const Cont2 = styled.div`
     flex-direction: column;
     margin: 6rem;
   }
+
+  @media (min-width: 500px) {
+    margin: 6rem;
+  }
 `;
 
 const Cont3 = styled.div`
@@ -66,6 +95,10 @@ const Cont3 = styled.div`
     display: flex;
     flex-direction: column;
     margin: 2rem;
+  }
+
+  @media (min-width: 500px) {
+    margin: 3rem;
   }
 `;
 

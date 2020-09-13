@@ -8,6 +8,10 @@ const HomeWrapper = styled.header`
   justify-content: space-around;
   align-items: center;
   font-family: "Poppins", sans-serif;
+
+  @media (min-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const TextBlock = styled.div`
@@ -29,6 +33,20 @@ const Header = styled.div`
     font-size: 3rem;
     margin-left: 0.5rem;
   }
+
+  @media (min-width: 700px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 600px) {
+    font-size: 1.8rem;
+    margin-right: -8;
+  }
+
+  @media (min-width: 500px) {
+    font-size: 2.5rem;
+    margin-right: -8;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -41,6 +59,19 @@ const ImageBlock = styled.img`
 
   @media (min-width: 800px) {
     margin-right: -4rem;
+  }
+
+  @media (min-width: 700px) {
+    margin-right: -4rem;
+  }
+
+  @media (min-width: 600px) {
+    margin-right: -7rem;
+  }
+
+  @media (min-width: 500px) {
+    padding-bottom: 5rem;
+    margin-top: 1rem;
   }
 `;
 
