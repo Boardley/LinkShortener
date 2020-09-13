@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import styled from "styled-components";
-import fetch from "../../images/fetch.svg";
+import formImage from "../../images/formImage.svg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const StyledLink = styled.button`
 const SubSection = () => {
   return (
     <>
-      <Wrapper style={{ backgroundImage: `url(${fetch})` }}>
+      <Wrapper style={{ backgroundImage: `url(${formImage})` }}>
         <h1>Boost your links today</h1>
         <StyledLink> Get Started </StyledLink>
       </Wrapper>

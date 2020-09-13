@@ -4,7 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Section from "./Section";
 import styled from "styled-components";
 
-import fetch from "../../images/fetch.svg";
+import formImage from "../../images/formImage.svg";
 
 import { PageLayout } from "../common/PageLayout";
 
@@ -147,7 +147,7 @@ const FetchComponent = () => {
   const ResultsContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 1rem;
     margin: 1rem;
 
@@ -156,9 +156,14 @@ const FetchComponent = () => {
     width: 59rem;
   `;
 
+  const ShortContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+  `;
+
   const ShortURL = styled.p`
-    /*   margin-left: 15rem;
-    margin-right: 3%; */
+    margin-left: -18%;
+
     color: #5ad2cf;
   `;
 
@@ -170,7 +175,7 @@ const FetchComponent = () => {
     <PageLayout>
       <Container>
         <Form
-          style={{ backgroundImage: `url(${fetch})` }}
+          style={{ backgroundImage: `url(${formImage})` }}
           onSubmit={handleSubmit(onSubmit)}
         >
           <Input
@@ -196,17 +201,19 @@ const FetchComponent = () => {
           {links.map((data) => {
             return (
               <ResultsContainer>
-                <p>{data.url.toString().substr(0, 30)}...</p>
+                <p>{data.url.toString().substr(0, 50)}...</p>
 
-                <ShortURL>{data.shortenUrl}</ShortURL>
+                <ShortContainer>
+                  <ShortURL>{data.shortenUrl}</ShortURL>
 
-                <CopyIcon>
-                  {data.shortenUrl && (
-                    <CopyToClipboard text={data.shortenUrl}>
-                      <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
-                    </CopyToClipboard>
-                  )}
-                </CopyIcon>
+                  <CopyIcon>
+                    {data.shortenUrl && (
+                      <CopyToClipboard text={data.shortenUrl}>
+                        <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
+                      </CopyToClipboard>
+                    )}
+                  </CopyIcon>
+                </ShortContainer>
               </ResultsContainer>
             );
           })}
