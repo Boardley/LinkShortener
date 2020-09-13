@@ -14,9 +14,13 @@ const Header = styled.div`
   text-align: center;
   margin: 3rem;
 
+  @media (min-width: 300px) {
+    margin-left: 4rem;
+    width: 17rem;
+  }
+
   @media (min-width: 200px) {
-    width: 23rem;
-    margin-left: 3rem;
+    width: 15rem;
   }
 `;
 
@@ -74,6 +78,10 @@ const Cont1 = styled.div`
     margin-bottom: 6rem;
   }
 
+  @media (min-width: 300px) {
+    width: 16rem;
+  }
+
   @media (min-width: 200px) {
     margin-top: 4rem;
     margin-bottom: 6rem;
@@ -97,6 +105,10 @@ const Cont2 = styled.div`
   @media (min-width: 500px) {
     margin: 6rem;
   }
+
+  @media (min-width: 300px) {
+    width: 16rem;
+  }
 `;
 
 const Cont3 = styled.div`
@@ -114,6 +126,10 @@ const Cont3 = styled.div`
 
   @media (min-width: 500px) {
     margin: 3rem;
+  }
+
+  @media (min-width: 300px) {
+    width: 16rem;
   }
 `;
 

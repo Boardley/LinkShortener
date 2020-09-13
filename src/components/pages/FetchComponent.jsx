@@ -117,6 +117,11 @@ const FetchComponent = () => {
       width: 113.6vw;
       margin-left: -2rem;
     }
+
+    @media (min-width: 300px) {
+      margin-left: -1.5rem;
+      width: 122%;
+    }
   `;
 
   const Form = styled.form`
@@ -152,6 +157,11 @@ const FetchComponent = () => {
       flex-direction: column;
       width: 70%;
     }
+
+    @media (min-width: 300px) {
+      flex-direction: column;
+      width: 70%;
+    }
   `;
 
   const Input = styled.input`
@@ -168,6 +178,12 @@ const FetchComponent = () => {
     }
 
     @media (min-width: 400px) {
+      margin-bottom: 0.5rem;
+      width: 90%;
+      height: 70%;
+    }
+
+    @media (min-width: 300px) {
       margin-bottom: 0.5rem;
       width: 90%;
       height: 70%;
@@ -213,6 +229,11 @@ const FetchComponent = () => {
       width: 95%;
       height: 72%;
     }
+
+    @media (min-width: 300px) {
+      width: 100%;
+      height: 72%;
+    }
   `;
 
   const ResultsContainer = styled.div`
@@ -246,6 +267,11 @@ const FetchComponent = () => {
 
     @media (min-width: 400px) {
       width: 20rem;
+      flex-direction: column;
+    }
+
+    @media (min-width: 300px) {
+      width: 15rem;
       flex-direction: column;
     }
   `;

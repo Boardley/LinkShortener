@@ -23,7 +23,8 @@ const Wrapper = styled.div`
   }
 
   @media (min-width: 200px) {
-    width: 110vw;
+    width: 105vw;
+    text-align: center;
   }
 `;
 

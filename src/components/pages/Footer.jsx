@@ -50,7 +50,7 @@ const Wrapper = styled.div`
     margin-top: 0rem;
     height: 101vh;
     text-align: center;
-    width: 110vw;
+    width: 105vw;
   }
 `;
 

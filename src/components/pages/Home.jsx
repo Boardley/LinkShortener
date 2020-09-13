@@ -27,6 +27,16 @@ const TextBlock = styled.div`
     width: 20rem;
     margin-bottom: -3rem;
   }
+
+  @media (min-width: 300px) {
+    width: 15rem;
+    margin-bottom: -3rem;
+  }
+
+  @media (min-width: 200px) {
+    width: 15rem;
+    margin-bottom: -3rem;
+  }
 `;
 
 const Header = styled.div`
@@ -55,6 +65,10 @@ const Header = styled.div`
 
   @media (min-width: 400px) {
     font-size: 2.5rem;
+  }
+
+  @media (min-width: 300px) {
+    font-size: 2.2rem;
   }
 `;
 
@@ -85,6 +99,10 @@ const ImageBlock = styled.img`
 
   @media (min-width: 400px) {
     width: 24rem;
+  }
+
+  @media (min-width: 300px) {
+    width: 17rem;
   }
 `;
 
