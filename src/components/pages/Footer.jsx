@@ -43,6 +43,15 @@ const Wrapper = styled.div`
     text-align: center;
     width: 106.6vw;
   }
+
+  @media (min-width: 200px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0rem;
+    height: 101vh;
+    text-align: center;
+    width: 110vw;
+  }
 `;
 
 const ImgCont = styled.div`

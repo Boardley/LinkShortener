@@ -13,6 +13,11 @@ const Container = styled.div`
 const Header = styled.div`
   text-align: center;
   margin: 3rem;
+
+  @media (min-width: 200px) {
+    width: 23rem;
+    margin-left: 3rem;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -40,6 +45,11 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media (min-width: 200px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 /* const Line = styled.div`
@@ -60,6 +70,11 @@ const Cont1 = styled.div`
   }
 
   @media (min-width: 600px) {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+  }
+
+  @media (min-width: 200px) {
     margin-top: 4rem;
     margin-bottom: 6rem;
   }

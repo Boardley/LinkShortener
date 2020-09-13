@@ -112,6 +112,11 @@ const FetchComponent = () => {
       width: 108.6vw;
       margin-left: -2rem;
     }
+
+    @media (min-width: 400px) {
+      width: 113.6vw;
+      margin-left: -2rem;
+    }
   `;
 
   const Form = styled.form`
@@ -142,6 +147,11 @@ const FetchComponent = () => {
       flex-direction: column;
       width: 70%;
     }
+
+    @media (min-width: 400px) {
+      flex-direction: column;
+      width: 70%;
+    }
   `;
 
   const Input = styled.input`
@@ -152,6 +162,12 @@ const FetchComponent = () => {
     outline: none;
 
     @media (min-width: 500px) {
+      margin-bottom: 0.5rem;
+      width: 90%;
+      height: 70%;
+    }
+
+    @media (min-width: 400px) {
       margin-bottom: 0.5rem;
       width: 90%;
       height: 70%;
@@ -192,6 +208,11 @@ const FetchComponent = () => {
       width: 95%;
       height: 72%;
     }
+
+    @media (min-width: 400px) {
+      width: 95%;
+      height: 72%;
+    }
   `;
 
   const ResultsContainer = styled.div`
@@ -222,6 +243,11 @@ const FetchComponent = () => {
       width: 25rem;
       flex-direction: column;
     }
+
+    @media (min-width: 400px) {
+      width: 20rem;
+      flex-direction: column;
+    }
   `;
 
   const ShortContainer = styled.div`
@@ -238,6 +264,10 @@ const FetchComponent = () => {
     }
 
     @media (min-width: 500px) {
+      margin-left: 0%;
+    }
+
+    @media (min-width: 200px) {
       margin-left: 0%;
     }
   `;
@@ -276,7 +306,7 @@ const FetchComponent = () => {
           {links.map((data) => {
             return (
               <ResultsContainer>
-                <p>{data.url.toString().substr(0, 40)}...</p>
+                <p>{data.url.toString().substr(0, 20)}...</p>
 
                 <ShortContainer>
                   <ShortURL>{data.shortenUrl}</ShortURL>

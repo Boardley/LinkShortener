@@ -9,7 +9,7 @@ const HomeWrapper = styled.header`
   align-items: center;
   font-family: "Poppins", sans-serif;
 
-  @media (min-width: 500px) {
+  @media (min-width: 200px) {
     flex-direction: column;
   }
 `;
@@ -21,6 +21,11 @@ const TextBlock = styled.div`
 
   @media (min-width: 800px) {
     margin-left: 0.5rem;
+  }
+
+  @media (min-width: 400px) {
+    width: 20rem;
+    margin-bottom: -3rem;
   }
 `;
 
@@ -47,6 +52,10 @@ const Header = styled.div`
     font-size: 2.5rem;
     margin-right: -8;
   }
+
+  @media (min-width: 400px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -72,6 +81,10 @@ const ImageBlock = styled.img`
   @media (min-width: 500px) {
     padding-bottom: 5rem;
     margin-top: 1rem;
+  }
+
+  @media (min-width: 400px) {
+    width: 24rem;
   }
 `;
 

@@ -21,6 +21,10 @@ const Wrapper = styled.div`
   @media (min-width: 500px) {
     width: 106.6vw;
   }
+
+  @media (min-width: 200px) {
+    width: 110vw;
+  }
 `;
 
 const StyledLink = styled.button`
