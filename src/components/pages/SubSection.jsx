@@ -16,6 +16,8 @@ const Wrapper = styled.div`
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+
+  /*  Media Queries  */
 `;
 
 const StyledLink = styled.button`
@@ -29,6 +31,7 @@ const StyledLink = styled.button`
   text-align: center;
   align-items: center;
   justify-content: center;
+  outline: none;
   border: none;
   cursor: pointer;
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import logo from "../../images/logo.svg";
+import whiteLogo from "../../images/whiteLogo.svg";
 import facebook from "../../images/facebook.svg";
 import instagram from "../../images/instagram.svg";
 import pinterest from "../../images/pinterest.svg";
@@ -15,12 +15,10 @@ const Wrapper = styled.div`
   width: 100.6vw;
   height: 40vh;
   padding-top: 3rem;
-  color: #ffffff;
   background-color: black;
-`;
-
-const LogoSub = styled.img`
   color: white;
+
+  /*  Media Queries  */
 `;
 
 const ImgCont = styled.div`
@@ -29,6 +27,7 @@ const ImgCont = styled.div`
 
 const Img = styled.img`
   padding: 1.2rem;
+  color: white;
 `;
 
 const P = styled.p`
@@ -39,7 +38,7 @@ const Footer = () => {
   return (
     <Wrapper>
       <div>
-        <LogoSub src={logo} alt="logo" />
+        <Img src={whiteLogo} alt="logo" />
       </div>
 
       <div>

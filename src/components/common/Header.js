@@ -42,7 +42,7 @@ const Menu1 = styled.nav`
   display: ${(props) => (props.open ? "block" : "none")};
   font-family: "Poppins", sans-serif;
   position: absolute;
-  width: 100%;
+  width: 100vw;
   top: 60px;
   left: 0;
   padding: 8px;
@@ -81,7 +81,9 @@ const MobileMenuIcon = styled.div`
 const Logo = styled.img`
   height: 1.8rem;
   margin: auto 0.5rem auto 0.5rem;
-  color: #323232;
+  /*   color: #323232;
+ */
+  color: pink;
 `;
 
 const StyledLink = styled.a`

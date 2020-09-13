@@ -91,6 +91,12 @@ const FetchComponent = () => {
     /*stretch container*/
     width: 100.6vw;
     margin-left: -25rem;
+
+    /*  Media Queries  */
+    @media (min-width: 800px) {
+      width: 101.6vw;
+      margin-left: -2rem;
+    }
   `;
 
   const Form = styled.form`
@@ -104,6 +110,10 @@ const FetchComponent = () => {
     padding: 1.6rem;
     margin: 1.6rem;
     margin-top: -4rem;
+
+    @media (min-width: 800px) {
+      width: 76%;
+    }
   `;
 
   const Input = styled.input`
@@ -111,6 +121,7 @@ const FetchComponent = () => {
     width: 60%;
     height: 2.5rem;
     padding-left: 1rem;
+    outline: none;
   `;
 
   const InputText = styled.p`
@@ -154,6 +165,10 @@ const FetchComponent = () => {
     background-color: #ffffff;
     border-radius: 0.3rem;
     width: 59rem;
+
+    @media (min-width: 800px) {
+      width: 40rem;
+    }
   `;
 
   const ShortContainer = styled.div`
@@ -201,7 +216,7 @@ const FetchComponent = () => {
           {links.map((data) => {
             return (
               <ResultsContainer>
-                <p>{data.url.toString().substr(0, 50)}...</p>
+                <p>{data.url.toString().substr(0, 40)}...</p>
 
                 <ShortContainer>
                   <ShortURL>{data.shortenUrl}</ShortURL>

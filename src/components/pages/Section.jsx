@@ -18,13 +18,20 @@ const Header = styled.div`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  margin-top: 5rem;
+
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
-const Line = styled.div`
+/* const Line = styled.div`
   font-size: 5rem;
   color: #5ad2cf;
   align-self: center;
-`;
+`; */
 
 const Cont1 = styled.div`
   background-color: white;
@@ -38,7 +45,14 @@ const Cont2 = styled.div`
   width: 20rem;
   height: 12rem;
   padding: 1rem;
-  margin-top: 3rem;
+  margin: 2.5rem;
+  margin-top: 4rem;
+
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem;
+  }
 `;
 
 const Cont3 = styled.div`
@@ -47,6 +61,12 @@ const Cont3 = styled.div`
   height: 12rem;
   padding: 1rem;
   margin-top: 8rem;
+
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
 `;
 
 const ImgCont = styled.div`
@@ -96,14 +116,11 @@ const Section = () => {
             </Text>
           </Cont1>
 
-          <Line>-</Line>
-
           <Cont2>
             <ImgCont>
               <Img src={detailedRecords} />
             </ImgCont>
             <p>
-              {" "}
               <strong> Detailed Records</strong>
             </p>
             <Text>
@@ -113,14 +130,11 @@ const Section = () => {
             </Text>
           </Cont2>
 
-          <Line>-</Line>
-
           <Cont3>
             <ImgCont>
               <Img src={fullyCustomizable} />
             </ImgCont>
             <p>
-              {" "}
               <strong> Fully customizable</strong>
             </p>
             <Text>
