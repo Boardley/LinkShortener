@@ -13,6 +13,7 @@ const HomeWrapper = styled.header`
 const TextBlock = styled.div`
   margin-top: 9rem;
   width: 30rem;
+  margin-bottom: 4rem;
 `;
 
 const Header = styled.div`

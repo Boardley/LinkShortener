@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Section from "./Section";
 import styled from "styled-components";
+
+import fetch from "../../images/fetch.svg";
 
 import { PageLayout } from "../common/PageLayout";
 
@@ -78,55 +81,138 @@ const FetchComponent = () => {
       });
   };
 
+  const Container = styled.div`
+    font-family: "Poppins", sans-serif;
+    background-color: #f1f1f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /*stretch container*/
+    width: 100.6vw;
+    margin-left: -25rem;
+  `;
+
   const Form = styled.form`
-    border: dotted pink 0.1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3b3153;
+    border-radius: 0.7rem;
     height: 5rem;
-    width: 100%;
+    width: 60%;
+    padding: 1.6rem;
+    margin: 1.6rem;
+    margin-top: -4rem;
   `;
 
   const Input = styled.input`
-    border: dotted yellowgreen 0.1rem;
-    width: 50%;
-    justify-items: center;
+    border-radius: 0.3rem;
+    width: 60%;
+    height: 2.5rem;
+    padding-left: 1rem;
+  `;
+
+  const InputText = styled.p`
+    color: white;
+    font-style: italic;
+    text-align: left;
+    position: absolute;
+    margin-left: -35rem;
+    margin-top: 100px;
+  `;
+
+  const InputText2 = styled.p`
+    position: absolute;
+    margin-left: -40rem;
+    color: #d54062;
+    font-style: italic;
+    text-align: left;
+    margin-top: 100px;
+  `;
+
+  const Button = styled.button`
+    background-color: #5ad2cf;
+    border-radius: 0.3rem;
+    width: 10rem;
+    height: 2.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  `;
+
+  const ResultsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 1rem;
+
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    width: 59rem;
+  `;
+
+  const ShortURL = styled.p`
+    /*   margin-left: 15rem;
+    margin-right: 3%; */
+    color: #5ad2cf;
+  `;
+
+  const CopyIcon = styled.p`
+    color: #5ad2cf;
   `;
 
   return (
     <PageLayout>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          name="linkShortener"
-          placeholder="Shorten Link Here..."
-          type="text"
-          ref={register({ required: true })}
-        />
+      <Container>
+        <Form
+          style={{ backgroundImage: `url(${fetch})` }}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <Input
+            name="linkShortener"
+            placeholder="Shorten Link Here..."
+            type="text"
+            ref={register({ required: true })}
+          />
 
-        <button type="submit"> Shorten Link </button>
-        {loading && <p className="text-color">Shortening Your Long Link...</p>}
+          <Button type="submit"> Shorten it! </Button>
+          {loading && (
+            <InputText className="text-color">
+              Shortening Your Long Link...
+            </InputText>
+          )}
 
-        {errors.linkShortener && (
-          <p className="error-text">Please add a link.</p>
-        )}
-      </Form>
+          {errors.linkShortener && (
+            <InputText2 className="error-text">Please add a link</InputText2>
+          )}
+        </Form>
 
-      <div>
-        {links.map((data) => {
-          return (
-            <>
-              <p>{data.url.toString().substr(0, 30)}...</p>
+        <div>
+          {links.map((data) => {
+            return (
+              <ResultsContainer>
+                <p>{data.url.toString().substr(0, 30)}...</p>
 
-              <p>{data.shortenUrl}</p>
+                <ShortURL>{data.shortenUrl}</ShortURL>
 
-              <p>
-                {data.shortenUrl && (
-                  <CopyToClipboard text={data.shortenUrl}>
-                    <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
-                  </CopyToClipboard>
-                )}
-              </p>
-            </>
-          );
-        })}
-      </div>
+                <CopyIcon>
+                  {data.shortenUrl && (
+                    <CopyToClipboard text={data.shortenUrl}>
+                      <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
+                    </CopyToClipboard>
+                  )}
+                </CopyIcon>
+              </ResultsContainer>
+            );
+          })}
+        </div>
+        <Section />
+      </Container>
     </PageLayout>
   );
 };
