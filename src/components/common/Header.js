@@ -4,13 +4,17 @@ import styled from "styled-components";
 import logo from "../../images/logo.svg";
 
 const HeaderWrapper = styled.header`
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
   height: 60px;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
   padding: 0 16px;
-  position: fixed;
-  top: 0;
 `;
 
 const Menu = styled.nav`
@@ -105,15 +109,14 @@ const StyledLink1 = styled.a`
 
 const StyledLink2 = styled.a`
   font-family: "Poppins", sans-serif;
+  color: white;
+  text-align: center;
   font-weight: 500;
   background-color: #5ad2cf;
-  color: white;
   border-radius: 5rem;
   width: 5rem;
   height: 2rem;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+  padding-top: 0.3rem;
   cursor: pointer;
 `;
 

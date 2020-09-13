@@ -31,6 +31,10 @@ const Img = styled.img`
   padding: 1.2rem;
 `;
 
+const P = styled.p`
+  font-weight: 200;
+`;
+
 const Footer = () => {
   return (
     <Wrapper>
@@ -39,31 +43,32 @@ const Footer = () => {
       </div>
 
       <div>
-        <p>
+        <P>
           {" "}
-          <strong> Features </strong> <p>Link Shortening</p>
-          <p>Branded Links</p>
-          <p>Analytics</p>
-        </p>
+          <strong> Features</strong>
+        </P>
+        <P>Link Shortening</P>
+        <P>Branded Links</P>
+        <P></P>
       </div>
 
       <div>
-        <p>
-          {" "}
-          <strong> Resources </strong> <p>Blog</p>
-          <p>Developers</p>
-          <p>Support</p>
-        </p>
+        <P>
+          <strong>Resources</strong>
+        </P>
+        <P>Blog</P>
+        <P>Developers</P>
+        <P>Support</P>
       </div>
 
       <div>
-        <p>
-          {" "}
-          <strong> Company </strong> <p>About</p>
-          <p>Our Team</p>
-          <p>Careers</p>
-          <p>Contact</p>
-        </p>
+        <P>
+          <strong>Company</strong>
+        </P>
+        <P>About</P>
+        <P>Our Team</P>
+        <P>Careers</P>
+        <P>Contact</P>
       </div>
 
       <ImgCont>
