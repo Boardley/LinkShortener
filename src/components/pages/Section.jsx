@@ -15,12 +15,9 @@ const Header = styled.div`
   margin: 3rem;
 
   @media (min-width: 300px) {
-    margin-left: 4rem;
-    width: 17rem;
-  }
-
-  @media (min-width: 200px) {
-    width: 15rem;
+    width: 16rem;
+    margin-left: 3.5rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -29,38 +26,11 @@ const Wrapper = styled.div`
   flex-direction: row;
   margin-top: 5rem;
 
-  @media (min-width: 800px) {
+  @media (min-width: 300px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: 700px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: 500px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (min-width: 200px) {
-    flex-direction: column;
-    align-items: center;
   }
 `;
-
-/* const Line = styled.div`
-  font-size: 5rem;
-  color: #5ad2cf;
-  align-self: center;
-`; */
 
 const Cont1 = styled.div`
   background-color: white;
@@ -68,23 +38,13 @@ const Cont1 = styled.div`
   height: 12rem;
   padding: 1rem;
 
-  @media (min-width: 700px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-  }
-
-  @media (min-width: 600px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-  }
-
   @media (min-width: 300px) {
-    width: 16rem;
-  }
-
-  @media (min-width: 200px) {
     margin-top: 4rem;
     margin-bottom: 6rem;
+    margin-left: 3rem;
+    width: 15rem;
+    height: 13rem;
+    padding: 1rem;
   }
 `;
 
@@ -96,18 +56,13 @@ const Cont2 = styled.div`
   margin: 2.5rem;
   margin-top: 4rem;
 
-  @media (min-width: 800px) {
-    display: flex;
-    flex-direction: column;
-    margin: 6rem;
-  }
-
-  @media (min-width: 500px) {
-    margin: 6rem;
-  }
-
   @media (min-width: 300px) {
-    width: 16rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    margin-left: 3rem;
+    width: 15rem;
+    height: 13rem;
+    padding: 1rem;
   }
 `;
 
@@ -118,18 +73,13 @@ const Cont3 = styled.div`
   padding: 1rem;
   margin-top: 8rem;
 
-  @media (min-width: 800px) {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-  }
-
-  @media (min-width: 500px) {
-    margin: 3rem;
-  }
-
   @media (min-width: 300px) {
-    width: 16rem;
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    margin-left: 3rem;
+    width: 15rem;
+    height: 13rem;
+    padding: 1rem;
   }
 `;
 

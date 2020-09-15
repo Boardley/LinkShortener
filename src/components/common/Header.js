@@ -26,15 +26,10 @@ const Menu = styled.nav`
   padding: 8px;
   box-sizing: border-box;
 
-  @media (min-width: 768px) {
+  @media (min-width: 300px) {
     display: flex;
-    background: none;
-    left: initial;
-    top: initial;
-    margin: auto 0 auto auto;
-    position: relative;
-    width: initial;
-    border-bottom: none;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -75,6 +70,10 @@ const MobileMenuIcon = styled.div`
 
   @media (min-width: 768px) {
     display: none;
+  }
+
+  @media (min-width: 300px) {
+    margin-right: 2.5rem;
   }
 `;
 

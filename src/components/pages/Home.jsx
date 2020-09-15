@@ -9,7 +9,7 @@ const HomeWrapper = styled.header`
   align-items: center;
   font-family: "Poppins", sans-serif;
 
-  @media (min-width: 200px) {
+  @media (min-width: 300px) {
     flex-direction: column;
   }
 `;
@@ -19,23 +19,10 @@ const TextBlock = styled.div`
   width: 30rem;
   margin-bottom: 4rem;
 
-  @media (min-width: 800px) {
-    margin-left: 0.5rem;
-  }
-
-  @media (min-width: 400px) {
-    width: 20rem;
-    margin-bottom: -3rem;
-  }
-
   @media (min-width: 300px) {
-    width: 15rem;
+    width: 13rem;
     margin-bottom: -3rem;
-  }
-
-  @media (min-width: 200px) {
-    width: 15rem;
-    margin-bottom: -3rem;
+    margin-left: -3rem;
   }
 `;
 
@@ -44,31 +31,8 @@ const Header = styled.div`
   font-weight: 700;
   color: #323232;
 
-  @media (min-width: 800px) {
-    font-size: 3rem;
-    margin-left: 0.5rem;
-  }
-
-  @media (min-width: 700px) {
-    font-size: 2rem;
-  }
-
-  @media (min-width: 600px) {
-    font-size: 1.8rem;
-    margin-right: -8;
-  }
-
-  @media (min-width: 500px) {
-    font-size: 2.5rem;
-    margin-right: -8;
-  }
-
-  @media (min-width: 400px) {
-    font-size: 2.5rem;
-  }
-
   @media (min-width: 300px) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 `;
 
@@ -80,29 +44,9 @@ const ImageBlock = styled.img`
   margin-top: 9rem;
   width: 30rem;
 
-  @media (min-width: 800px) {
-    margin-right: -4rem;
-  }
-
-  @media (min-width: 700px) {
-    margin-right: -4rem;
-  }
-
-  @media (min-width: 600px) {
-    margin-right: -7rem;
-  }
-
-  @media (min-width: 500px) {
-    padding-bottom: 5rem;
-    margin-top: 1rem;
-  }
-
-  @media (min-width: 400px) {
-    width: 24rem;
-  }
-
   @media (min-width: 300px) {
-    width: 17rem;
+    width: 14rem;
+    margin-left: -4rem;
   }
 `;
 

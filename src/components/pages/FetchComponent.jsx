@@ -93,31 +93,6 @@ const FetchComponent = () => {
     margin-left: -25rem;
 
     /*  Media Queries  */
-    @media (min-width: 800px) {
-      width: 101.6vw;
-      margin-left: -2rem;
-    }
-
-    @media (min-width: 700px) {
-      width: 101.6vw;
-      margin-left: -2rem;
-    }
-
-    @media (min-width: 600px) {
-      width: 103.6vw;
-      margin-left: -2rem;
-    }
-
-    @media (min-width: 500px) {
-      width: 108.6vw;
-      margin-left: -2rem;
-    }
-
-    @media (min-width: 400px) {
-      width: 113.6vw;
-      margin-left: -2rem;
-    }
-
     @media (min-width: 300px) {
       margin-left: -1.5rem;
       width: 122%;
@@ -136,31 +111,10 @@ const FetchComponent = () => {
     margin: 1.6rem;
     margin-top: -4rem;
 
-    @media (min-width: 800px) {
-      width: 76%;
-    }
-
-    @media (min-width: 700px) {
-      width: 85%;
-    }
-
-    @media (min-width: 600px) {
-      width: 76%;
-    }
-
-    @media (min-width: 500px) {
-      flex-direction: column;
-      width: 70%;
-    }
-
-    @media (min-width: 400px) {
-      flex-direction: column;
-      width: 70%;
-    }
-
     @media (min-width: 300px) {
       flex-direction: column;
-      width: 70%;
+      width: 76%;
+      margin-left: 1.5rem;
     }
   `;
 
@@ -171,22 +125,10 @@ const FetchComponent = () => {
     padding-left: 1rem;
     outline: none;
 
-    @media (min-width: 500px) {
-      margin-bottom: 0.5rem;
-      width: 90%;
-      height: 70%;
-    }
-
-    @media (min-width: 400px) {
-      margin-bottom: 0.5rem;
-      width: 90%;
-      height: 70%;
-    }
-
     @media (min-width: 300px) {
       margin-bottom: 0.5rem;
-      width: 90%;
-      height: 70%;
+      width: 104%;
+      height: 79%;
     }
   `;
 
@@ -220,19 +162,9 @@ const FetchComponent = () => {
     border: none;
     cursor: pointer;
 
-    @media (min-width: 500px) {
-      width: 95%;
-      height: 72%;
-    }
-
-    @media (min-width: 400px) {
-      width: 95%;
-      height: 72%;
-    }
-
     @media (min-width: 300px) {
-      width: 100%;
-      height: 72%;
+      width: 114%;
+      height: 80%;
     }
   `;
 
@@ -247,32 +179,11 @@ const FetchComponent = () => {
     border-radius: 0.3rem;
     width: 59rem;
 
-    @media (min-width: 800px) {
-      width: 40rem;
-    }
-
-    @media (min-width: 700px) {
-      width: 39rem;
-    }
-
-    @media (min-width: 600px) {
-      width: 31rem;
-      flex-direction: column;
-    }
-
-    @media (min-width: 500px) {
-      width: 25rem;
-      flex-direction: column;
-    }
-
-    @media (min-width: 400px) {
-      width: 20rem;
-      flex-direction: column;
-    }
-
     @media (min-width: 300px) {
-      width: 15rem;
       flex-direction: column;
+      font-size: 0.7rem;
+      margin-left: 1rem;
+      width: 16rem;
     }
   `;
 
@@ -285,15 +196,7 @@ const FetchComponent = () => {
     margin-left: -18%;
     color: #5ad2cf;
 
-    @media (min-width: 600px) {
-      margin-left: 0%;
-    }
-
-    @media (min-width: 500px) {
-      margin-left: 0%;
-    }
-
-    @media (min-width: 200px) {
+    @media (min-width: 300px) {
       margin-left: 0%;
     }
   `;
