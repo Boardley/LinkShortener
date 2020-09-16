@@ -3,51 +3,44 @@ import Footer from "./Footer";
 import styled from "styled-components";
 import formImage from "../../images/formImage.svg";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #3b3153;
-  width: 100.6vw;
-  height: 40vh;
-  margin-top: 5rem;
+const Container = styled.div`
+  font-family: "Poppins", sans-serif;
   color: white;
+  text-align: center;
+  margin-left: -1rem;
+  padding-top: 35%;
+  width: 105vw;
+  height: 20vh;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-
-  /*  Media Queries  */
-
-  @media (min-width: 300px) {
-    width: 105vw;
-    text-align: center;
-  }
+  background-color: #4b3f6b;
 `;
 
-const StyledLink = styled.button`
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  background-color: #5ad2cf;
-  color: white;
-  border-radius: 5rem;
-  width: 9rem;
-  height: 2.5rem;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+const Title = styled.h1`
+  font-size: 1rem;
+`;
+
+const Button = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  border-radius: 3rem;
+  background-color: #59d1d0;
+  height: 2.5rem;
+  width: 7rem;
+  color: white;
+  font-weight: bold;
+  margin-top: 0.5rem;
 `;
 
 const SubSection = () => {
   return (
     <>
-      <Wrapper style={{ backgroundImage: `url(${formImage})` }}>
-        <h1>Boost your links today</h1>
-        <StyledLink> Get Started </StyledLink>
-      </Wrapper>
+      <Container style={{ backgroundImage: `url(${formImage})` }}>
+        <Title>Boost your links today</Title>
+        <Button> Get Started </Button>
+      </Container>
       <Footer />
     </>
   );

@@ -1,163 +1,66 @@
 import React from "react";
-import styled from "styled-components";
-import SubSection from "./SubSection";
+/* import styled from "styled-components";
+ */ import SubSection from "./SubSection";
 
 import detailedRecords from "../../images/detailedRecords.svg";
 import brandRecognition from "../../images/brandRecognition.svg";
 import fullyCustomizable from "../../images/fullyCustomizable.svg";
 
-const Container = styled.div`
-  font-family: "Poppins", sans-serif;
-`;
-
-const Header = styled.div`
-  text-align: center;
-  margin: 3rem;
-
-  @media (min-width: 300px) {
-    width: 16rem;
-    margin-left: 3.5rem;
-    font-size: 0.8rem;
-  }
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 5rem;
-
-  @media (min-width: 300px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const Cont1 = styled.div`
-  background-color: white;
-  width: 20rem;
-  height: 12rem;
-  padding: 1rem;
-
-  @media (min-width: 300px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 3rem;
-    width: 15rem;
-    height: 13rem;
-    padding: 1rem;
-  }
-`;
-
-const Cont2 = styled.div`
-  background-color: white;
-  width: 20rem;
-  height: 12rem;
-  padding: 1rem;
-  margin: 2.5rem;
-  margin-top: 4rem;
-
-  @media (min-width: 300px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 3rem;
-    width: 15rem;
-    height: 13rem;
-    padding: 1rem;
-  }
-`;
-
-const Cont3 = styled.div`
-  background-color: white;
-  width: 20rem;
-  height: 12rem;
-  padding: 1rem;
-  margin-top: 8rem;
-
-  @media (min-width: 300px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 3rem;
-    width: 15rem;
-    height: 13rem;
-    padding: 1rem;
-  }
-`;
-
-const ImgCont = styled.div`
-  background-color: #3b3153;
-  border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
-  display: flex;
-  justify-content: center;
-  margin-top: -3rem;
-`;
-
-const Img = styled.img`
-  align-self: center;
-  height: 1.7rem;
-  width: 1.7rem;
-`;
-
-const Text = styled.p`
-  color: #8d93ab;
-`;
-
 const Section = () => {
   return (
     <>
-      <Container>
-        <Header>
+      <div>
+        <div>
           <h1>Advanced Statistics</h1>
           <p>
             Track how your links are performing across the web with
             <br /> our advanced statistics dashboard.
           </p>
-        </Header>
+        </div>
 
-        <Wrapper>
-          <Cont1>
-            <ImgCont>
-              <Img src={brandRecognition} />
-            </ImgCont>
+        <div>
+          <div>
+            <div>
+              <img src={brandRecognition} />
+            </div>
             <p>
               <strong> Brand Recognition</strong>
             </p>
-            <Text>
+            <p>
               Boost your brand recognition with each click. Generick links don't
               mean a thing. Branded links help instill confidence in your
               content.
-            </Text>
-          </Cont1>
+            </p>
+          </div>
 
-          <Cont2>
-            <ImgCont>
-              <Img src={detailedRecords} />
-            </ImgCont>
+          <div>
+            <div>
+              <img src={detailedRecords} />
+            </div>
             <p>
               <strong> Detailed Records</strong>
             </p>
-            <Text>
+            <p>
               Gain Insights into who is clicking your links. Knowing when and
               where people engage with uour content helps inform better
               decisions.
-            </Text>
-          </Cont2>
+            </p>
+          </div>
 
-          <Cont3>
-            <ImgCont>
-              <Img src={fullyCustomizable} />
-            </ImgCont>
+          <div>
+            <div>
+              <img src={fullyCustomizable} />
+            </div>
             <p>
               <strong> Fully customizable</strong>
             </p>
-            <Text>
+            <p>
               Improve brand awareness and content discoverability through
               customizable links, supercharging audience engagement.
-            </Text>
-          </Cont3>
-        </Wrapper>
-      </Container>
+            </p>
+          </div>
+        </div>
+      </div>
       <SubSection />
     </>
   );

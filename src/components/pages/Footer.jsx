@@ -7,88 +7,69 @@ import instagram from "../../images/instagram.svg";
 import pinterest from "../../images/pinterest.svg";
 import twitter from "../../images/twitter.svg";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 100.6vw;
-  height: 40vh;
-  padding-top: 3rem;
-  background-color: black;
+const Container = styled.div`
+  font-family: "Poppins", sans-serif;
   color: white;
-
-  /*  Media Queries  */
-
-  @media (min-width: 300px) {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0rem;
-    height: 101vh;
-    text-align: center;
-    width: 105vw;
-  }
-`;
-
-const ImgCont = styled.div`
-  display: flex;
+  text-align: center;
+  background-color: black;
+  margin-left: -1rem;
+  width: 105vw;
+  height: 120vh;
 `;
 
 const Img = styled.img`
-  padding: 1.2rem;
-  color: white;
+  margin-top: 3rem;
 `;
 
-const P = styled.p`
-  font-weight: 200;
+const Icons = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
 `;
 
 const Footer = () => {
   return (
-    <Wrapper>
-      <div>
-        <Img src={whiteLogo} alt="logo" />
-      </div>
+    <Container>
+      <Img src={whiteLogo} alt="logo" />
 
       <div>
-        <P>
+        <p>
           {" "}
           <strong> Features</strong>
-        </P>
-        <P>Link Shortening</P>
-        <P>Branded Links</P>
-        <P></P>
+        </p>
+        <p>Link Shortening</p>
+        <p>Branded Links</p>
       </div>
 
       <div>
-        <P>
+        <p>
           <strong>Resources</strong>
-        </P>
-        <P>Blog</P>
-        <P>Developers</P>
-        <P>Support</P>
+        </p>
+        <p>Blog</p>
+        <p>Developers</p>
+        <p>Support</p>
       </div>
 
       <div>
-        <P>
+        <p>
           <strong>Company</strong>
-        </P>
-        <P>About</P>
-        <P>Our Team</P>
-        <P>Careers</P>
-        <P>Contact</P>
+        </p>
+        <p>About</p>
+        <p>Our Team</p>
+        <p>Careers</p>
+        <p>Contact</p>
       </div>
 
-      <ImgCont>
-        <Img src={facebook} />
+      <Icons>
+        <img src={facebook} />
 
-        <Img src={twitter} />
+        <img src={twitter} />
 
-        <Img src={pinterest} />
+        <img src={pinterest} />
 
-        <Img src={instagram} />
-      </ImgCont>
-    </Wrapper>
+        <img src={instagram} />
+      </Icons>
+    </Container>
   );
 };
 
