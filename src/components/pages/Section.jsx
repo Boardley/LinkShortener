@@ -7,156 +7,259 @@ import brandRecognition from "../../images/brandRecognition.svg";
 import fullyCustomizable from "../../images/fullyCustomizable.svg";
 
 const Container = styled.div`
+  display: flex;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
+  border-radius: 2%;
+  background-color: #eff1f7;
+  text-align: center;
+  margin-top: -2rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  width: 100vw;
+  margin-left: -0.5rem;
+
+  @media (max-width: 2000px) {
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: row;
+    width: 101vw;
+  }
 `;
 
-const Header = styled.div`
-  text-align: center;
-  margin: 3rem;
+const Header = styled.h1`
+  font-size: 1.4rem;
 
-  @media (min-width: 300px) {
-    width: 16rem;
-    margin-left: 3.5rem;
-    font-size: 0.8rem;
+  @media (max-width: 2000px) {
+    font-size: 3.3rem;
+  }
+
+  @media (max-width: 1500px) {
+    font-size: 3.3rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 3.3rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 3.3rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2.7rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 2.4rem;
+  }
+`;
+
+const P = styled.p`
+  font-size: 0.9rem;
+
+  @media (max-width: 2000px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1500px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.7rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.6rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: auto;
   }
 `;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 5rem;
+  margin-top: 6rem;
 
-  @media (min-width: 300px) {
+  @media (max-width: 2000px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 1500px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: row;
   }
 `;
 
-const Cont1 = styled.div`
+const SubContainer = styled.div`
   background-color: white;
-  width: 20rem;
-  height: 12rem;
-  padding: 1rem;
+  max-width: 80%;
+  margin: 5rem auto;
+  padding: 0.5rem;
 
-  @media (min-width: 300px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 3rem;
-    width: 15rem;
-    height: 13rem;
-    padding: 1rem;
+  @media (max-width: 2000px) {
+    max-width: 20%;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
-`;
 
-const Cont2 = styled.div`
-  background-color: white;
-  width: 20rem;
-  height: 12rem;
-  padding: 1rem;
-  margin: 2.5rem;
-  margin-top: 4rem;
-
-  @media (min-width: 300px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 3rem;
-    width: 15rem;
-    height: 13rem;
-    padding: 1rem;
+  @media (max-width: 1500px) {
+    max-width: 20%;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
-`;
 
-const Cont3 = styled.div`
-  background-color: white;
-  width: 20rem;
-  height: 12rem;
-  padding: 1rem;
-  margin-top: 8rem;
-
-  @media (min-width: 300px) {
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 3rem;
-    width: 15rem;
-    height: 13rem;
-    padding: 1rem;
+  @media (max-width: 1000px) {
+    max-width: 40%;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
   }
-`;
 
-const ImgCont = styled.div`
-  background-color: #3b3153;
-  border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
-  display: flex;
-  justify-content: center;
-  margin-top: -3rem;
+  @media (max-width: 800px) {
+    max-width: 40%;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+    max-width: 70%;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.1rem;
+    max-width: 70%;
+  }
 `;
 
 const Img = styled.img`
-  align-self: center;
-  height: 1.7rem;
-  width: 1.7rem;
-`;
+  background-color: hsl(260, 8%, 14%);
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-top: -2rem;
 
-const Text = styled.p`
-  color: #8d93ab;
+  @media (max-width: 2000px) {
+    width: 3.8rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 3.8rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 3.8rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 3.6rem;
+  }
+
+  @media (max-width: 600px) {
+    width: 3.4rem;
+  }
 `;
 
 const Section = () => {
   return (
     <>
       <Container>
-        <Header>
-          <h1>Advanced Statistics</h1>
-          <p>
-            Track how your links are performing across the web with
-            <br /> our advanced statistics dashboard.
-          </p>
-        </Header>
+        <div>
+          <div>
+            <Header>Advanced Statistics</Header>
+            <P>
+              Track how your links are performing across the web with
+              <br /> our advanced statistics dashboard.
+            </P>
+          </div>
 
-        <Wrapper>
-          <Cont1>
-            <ImgCont>
-              <Img src={brandRecognition} />
-            </ImgCont>
-            <p>
-              <strong> Brand Recognition</strong>
-            </p>
-            <Text>
-              Boost your brand recognition with each click. Generick links don't
-              mean a thing. Branded links help instill confidence in your
-              content.
-            </Text>
-          </Cont1>
+          <Wrapper>
+            <SubContainer>
+              <div>
+                <div>
+                  <Img src={brandRecognition} />
+                </div>
+                <p>
+                  <strong> Brand Recognition</strong>
+                </p>
+                <p>
+                  Boost your brand recognition with each click. Generick links
+                  don't mean a thing. Branded links help instill confidence in
+                  your content.
+                </p>
+              </div>
+            </SubContainer>
 
-          <Cont2>
-            <ImgCont>
-              <Img src={detailedRecords} />
-            </ImgCont>
-            <p>
-              <strong> Detailed Records</strong>
-            </p>
-            <Text>
-              Gain Insights into who is clicking your links. Knowing when and
-              where people engage with uour content helps inform better
-              decisions.
-            </Text>
-          </Cont2>
+            <SubContainer>
+              <div>
+                <Img src={detailedRecords} />
+              </div>
+              <p>
+                <strong> Detailed Records</strong>
+              </p>
+              <p>
+                Gain Insights into who is clicking your links. Knowing when and
+                where people engage with uour content helps inform better
+                decisions.
+              </p>
+            </SubContainer>
 
-          <Cont3>
-            <ImgCont>
-              <Img src={fullyCustomizable} />
-            </ImgCont>
-            <p>
-              <strong> Fully customizable</strong>
-            </p>
-            <Text>
-              Improve brand awareness and content discoverability through
-              customizable links, supercharging audience engagement.
-            </Text>
-          </Cont3>
-        </Wrapper>
+            <SubContainer>
+              <div>
+                <Img src={fullyCustomizable} />
+              </div>
+              <p>
+                <strong> Fully customizable</strong>
+              </p>
+              <p>
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </SubContainer>
+          </Wrapper>
+        </div>
       </Container>
       <SubSection />
     </>

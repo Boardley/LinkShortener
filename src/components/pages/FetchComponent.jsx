@@ -4,9 +4,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import Section from "./Section";
 import styled from "styled-components";
 
-import formImage from "../../images/formImage.svg";
-
-import { PageLayout } from "../common/PageLayout";
+import boostDesktop from "../../images/boostDesktop.svg";
 
 /* Saving in Local Storage */
 const SaveDataToLocalStorage = (data) => {
@@ -82,134 +80,206 @@ const FetchComponent = () => {
   };
 
   const Container = styled.div`
-    font-family: "Poppins", sans-serif;
-    background-color: #f1f1f6;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    /*stretch container*/
-    width: 100.6vw;
-    margin-left: -25rem;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #eff1f7;
+    width: 100vw;
 
-    /*  Media Queries  */
-    @media (min-width: 300px) {
-      margin-left: -1.5rem;
-      width: 122%;
+    @media (max-width: 700px) {
+      width: 101vw;
     }
   `;
 
-  const Form = styled.form`
+  const Form = styled.div`
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #3b3153;
-    border-radius: 0.7rem;
-    height: 5rem;
-    width: 60%;
-    padding: 1.6rem;
-    margin: 1.6rem;
-    margin-top: -4rem;
+    background-color: hsl(257, 27%, 26%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    width: 70vw;
+    padding: 1rem;
+    margin-top: -6rem;
 
-    @media (min-width: 300px) {
+    @media (max-width: 2000px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 10rem;
+    }
+
+    @media (max-width: 1500px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 700px) {
       flex-direction: column;
-      width: 76%;
-      margin-left: 1.5rem;
+      width: 85%;
+    }
+
+    @media (max-width: 500px) {
+      width: 80%;
+      border-radius: 0.5rem;
     }
   `;
 
   const Input = styled.input`
+    font-size: 0.7rem;
+    min-width: 80%;
+    max-width: 80%;
+    padding: 0.5rem;
     border-radius: 0.3rem;
-    width: 60%;
-    height: 2.5rem;
-    padding-left: 1rem;
-    outline: none;
+    margin-bottom: 0.5rem;
 
-    @media (min-width: 300px) {
-      margin-bottom: 0.5rem;
-      width: 104%;
-      height: 79%;
+    @media (max-width: 2000px) {
+      font-size: 1.4rem;
+      height: 3rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
     }
-  `;
 
-  const InputText = styled.p`
-    color: white;
-    font-style: italic;
-    text-align: left;
-    position: absolute;
-    margin-left: -35rem;
-    margin-top: 100px;
-  `;
+    @media (max-width: 1500px) {
+      font-size: 1.2rem;
+      height: 2rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
 
-  const InputText2 = styled.p`
-    position: absolute;
-    margin-left: -40rem;
-    color: #d54062;
-    font-style: italic;
-    text-align: left;
-    margin-top: 100px;
+    @media (max-width: 1000px) {
+      font-size: 1.2rem;
+      height: 2rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
+
+    @media (max-width: 800px) {
+      font-size: 1.2rem;
+      height: 2rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+      min-width: 90%;
+      max-width: 90%;
+      height: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+      min-width: 90%;
+      max-width: 90%;
+      padding: 1rem;
+      border-radius: 0.3rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1rem;
+      min-width: 90%;
+      max-width: 90%;
+      padding: 1rem;
+      border-radius: 0.3rem;
+    }
   `;
 
   const Button = styled.button`
-    background-color: #5ad2cf;
-    border-radius: 0.3rem;
-    width: 10rem;
-    height: 2.5rem;
-    color: white;
     font-size: 1rem;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
     font-weight: 700;
-    outline: none;
+    border-radius: 0.3rem;
+    max-width: 90%;
+    min-width: 90%;
+    padding: 0.6rem;
+    align-content: center;
+    margin-bottom: 0.5rem;
     border: none;
+    outline: none;
     cursor: pointer;
 
-    @media (min-width: 300px) {
-      width: 114%;
-      height: 80%;
+    @media (max-width: 2000px) {
+      font-size: 1.5rem;
+      height: 4.1rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
     }
-  `;
 
-  const ResultsContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-    margin: 1rem;
-
-    background-color: #ffffff;
-    border-radius: 0.3rem;
-    width: 59rem;
-
-    @media (min-width: 300px) {
-      flex-direction: column;
-      font-size: 0.7rem;
-      margin-left: 1rem;
-      width: 16rem;
+    @media (max-width: 1500px) {
+      height: 3.2rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
     }
-  `;
 
-  const ShortContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-  `;
-
-  const ShortURL = styled.p`
-    margin-left: -18%;
-    color: #5ad2cf;
-
-    @media (min-width: 300px) {
-      margin-left: 0%;
+    @media (max-width: 1000px) {
+      height: 3.2rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
     }
-  `;
 
-  const CopyIcon = styled.p`
-    color: #5ad2cf;
+    @media (max-width: 800px) {
+      height: 3.2rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.7rem;
+      max-width: 93%;
+      min-width: 93%;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+      max-width: 98%;
+      min-width: 98%;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      border-radius: 0.3rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+      max-width: 98%;
+      min-width: 98%;
+      padding: 1rem;
+      border-radius: 0.3rem;
+    }
   `;
 
   return (
-    <PageLayout>
+    <>
       <Container>
         <Form
-          style={{ backgroundImage: `url(${formImage})` }}
+          style={{ backgroundImage: `url(${boostDesktop})` }}
           onSubmit={handleSubmit(onSubmit)}
         >
           <Input
@@ -221,40 +291,38 @@ const FetchComponent = () => {
 
           <Button type="submit"> Shorten it! </Button>
           {loading && (
-            <InputText className="text-color">
-              Shortening Your Long Link...
-            </InputText>
+            <div className="text-color">Shortening Your Long Link...</div>
           )}
 
           {errors.linkShortener && (
-            <InputText2 className="error-text">Please add a link</InputText2>
+            <div className="error-text">Please add a link</div>
           )}
         </Form>
 
         <div>
           {links.map((data) => {
             return (
-              <ResultsContainer>
+              <div>
                 <p>{data.url.toString().substr(0, 20)}...</p>
 
-                <ShortContainer>
-                  <ShortURL>{data.shortenUrl}</ShortURL>
+                <div>
+                  <div>{data.shortenUrl}</div>
 
-                  <CopyIcon>
+                  <div>
                     {data.shortenUrl && (
                       <CopyToClipboard text={data.shortenUrl}>
                         <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
                       </CopyToClipboard>
                     )}
-                  </CopyIcon>
-                </ShortContainer>
-              </ResultsContainer>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>
-        <Section />
       </Container>
-    </PageLayout>
+      <Section />
+    </>
   );
 };
 export default FetchComponent;

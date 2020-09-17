@@ -7,88 +7,195 @@ import instagram from "../../images/instagram.svg";
 import pinterest from "../../images/pinterest.svg";
 import twitter from "../../images/twitter.svg";
 
-const Wrapper = styled.div`
+const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 100.6vw;
-  height: 40vh;
-  padding-top: 3rem;
-  background-color: black;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
   color: white;
+  text-align: center;
+  background-color: black;
+  margin-left: -1rem;
+  width: 105vw;
+  height: 120vh;
+  padding-bottom: 1rem;
 
-  /*  Media Queries  */
+  @media (max-width: 2000px) {
+    font-size: 1.3rem;
+    width: 105%;
+    height: 80vh;
+  }
 
-  @media (min-width: 300px) {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0rem;
-    height: 101vh;
+  @media (max-width: 1500px) {
+    font-size: 1.3rem;
+    width: 105%;
+    height: 120vh;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 200px) {
     text-align: center;
+    margin-left: -1rem;
     width: 105vw;
+    height: 120vh;
+    padding-bottom: 1rem;
   }
 `;
 
-const ImgCont = styled.div`
-  display: flex;
+const TextWrapper = styled.div`
+  @media (max-width: 2000px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    padding-top: 3rem;
+  }
+
+  @media (max-width: 1500px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    padding-top: 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+  }
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+  }
 `;
 
 const Img = styled.img`
-  padding: 1.2rem;
-  color: white;
+  margin-top: 3rem;
+
+  @media (max-width: 2000px) {
+    width: 10rem;
+    margin-top: 3rem;
+    margin-left: 50%;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 1500px) {
+    width: 10rem;
+    margin-top: 3rem;
+    margin-left: 40%;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 10rem;
+    margin-top: 3rem;
+    margin-left: 40%;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 10rem;
+    margin-top: 3rem;
+    margin-left: 40%;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 9rem;
+  }
 `;
 
-const P = styled.p`
-  font-weight: 200;
+const Icons = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+
+  @media (max-width: 2000px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1500px) {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+  }
+
+  @media (max-width: 800px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 7rem;
+  }
 `;
 
 const Footer = () => {
   return (
-    <Wrapper>
-      <div>
-        <Img src={whiteLogo} alt="logo" />
-      </div>
+    <Container>
+      <Img src={whiteLogo} alt="logo" />
 
-      <div>
-        <P>
-          {" "}
-          <strong> Features</strong>
-        </P>
-        <P>Link Shortening</P>
-        <P>Branded Links</P>
-        <P></P>
-      </div>
+      <TextWrapper>
+        <div>
+          <p>
+            {" "}
+            <strong> Features</strong>
+          </p>
+          <p>Link Shortening</p>
+          <p>Branded Links</p>
+        </div>
 
-      <div>
-        <P>
-          <strong>Resources</strong>
-        </P>
-        <P>Blog</P>
-        <P>Developers</P>
-        <P>Support</P>
-      </div>
+        <div>
+          <p>
+            <strong>Resources</strong>
+          </p>
+          <p>Blog</p>
+          <p>Developers</p>
+          <p>Support</p>
+        </div>
 
-      <div>
-        <P>
-          <strong>Company</strong>
-        </P>
-        <P>About</P>
-        <P>Our Team</P>
-        <P>Careers</P>
-        <P>Contact</P>
-      </div>
+        <div>
+          <p>
+            <strong>Company</strong>
+          </p>
+          <p>About</p>
+          <p>Our Team</p>
+          <p>Careers</p>
+          <p>Contact</p>
+        </div>
+      </TextWrapper>
 
-      <ImgCont>
-        <Img src={facebook} />
+      <Icons>
+        <img src={facebook} alt="facebook-icon" />
 
-        <Img src={twitter} />
+        <img src={twitter} alt="twitter-icon" />
 
-        <Img src={pinterest} />
+        <img src={pinterest} alt="pinterest-icon" />
 
-        <Img src={instagram} />
-      </ImgCont>
-    </Wrapper>
+        <img src={instagram} alt="insta-icon" />
+      </Icons>
+    </Container>
   );
 };
 
