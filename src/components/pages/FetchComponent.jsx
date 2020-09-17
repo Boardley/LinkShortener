@@ -86,9 +86,19 @@ const FetchComponent = () => {
     text-align: center;
     background-color: #eff1f7;
     width: 100vw;
+    margin-left: -1rem;
+
+    @media (max-width: 1500px) {
+      width: 101vw;
+      margin-left: -1rem;
+    }
 
     @media (max-width: 700px) {
       width: 101vw;
+    }
+
+    @media (max-width: 300px) {
+      width: 103vw;
     }
   `;
 
@@ -111,7 +121,6 @@ const FetchComponent = () => {
     }
 
     @media (max-width: 1500px) {
-      flex-direction: row;
       width: 89vw;
       padding: 1rem;
       height: 8rem;
@@ -139,6 +148,11 @@ const FetchComponent = () => {
     @media (max-width: 500px) {
       width: 80%;
       border-radius: 0.5rem;
+    }
+
+    @media (max-width: 200px) {
+      width: 80%;
+      margin: auto auto auto 0.7rem;
     }
   `;
 
@@ -193,6 +207,7 @@ const FetchComponent = () => {
       font-size: 1.1rem;
       min-width: 90%;
       max-width: 90%;
+      height: 1.4rem;
       padding: 1rem;
       border-radius: 0.3rem;
     }
@@ -203,6 +218,20 @@ const FetchComponent = () => {
       max-width: 90%;
       padding: 1rem;
       border-radius: 0.3rem;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 0.9rem;
+      min-width: 90%;
+      max-width: 90%;
+      padding: 0.8rem;
+      border-radius: 0.3rem;
+    }
+
+    @media (max-width: 200px) {
+      min-width: 85%;
+      max-width: 85%;
+      padding: 0.6rem;
     }
   `;
 
@@ -272,6 +301,20 @@ const FetchComponent = () => {
       min-width: 98%;
       padding: 1rem;
       border-radius: 0.3rem;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 1.5rem;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0.7rem;
+    }
+
+    @media (max-width: 200px) {
+      font-size: 1.2rem;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0.3rem;
     }
   `;
 

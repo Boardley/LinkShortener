@@ -28,7 +28,7 @@ const Container = styled.div`
   @media (max-width: 1500px) {
     font-size: 1.3rem;
     width: 105%;
-    height: 120vh;
+    height: 80vh;
   }
 
   @media (max-width: 1000px) {
@@ -37,6 +37,7 @@ const Container = styled.div`
 
   @media (max-width: 800px) {
     font-size: 1.2rem;
+    height: 70vh;
   }
 
   @media (max-width: 700px) {
@@ -44,7 +45,17 @@ const Container = styled.div`
   }
 
   @media (max-width: 600px) {
+    width: 102vw;
+  }
+
+  @media (max-width: 500px) {
     font-size: 1.1rem;
+    height: 110vh;
+  }
+
+  @media (max-width: 300px) {
+    height: 110vh;
+    width: 103vw;
   }
 
   @media (max-width: 200px) {
@@ -86,10 +97,21 @@ const TextWrapper = styled.div`
     justify-content: space-evenly;
     text-align: left;
   }
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+  }
+
+  @media (max-width: 200px) {
+    margin-top: auto;
+    margin-top: -3rem;
+  }
 `;
 
 const Img = styled.img`
-  margin-top: 3rem;
+  margin: 3rem auto auto auto;
 
   @media (max-width: 2000px) {
     width: 10rem;
@@ -121,6 +143,10 @@ const Img = styled.img`
 
   @media (max-width: 700px) {
     width: 9rem;
+  }
+
+  @media (max-width: 500px) {
+    margin: auto;
   }
 `;
 

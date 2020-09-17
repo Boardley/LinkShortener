@@ -31,6 +31,11 @@ const Container = styled.div`
     flex-direction: row;
     margin-top: 5rem;
   }
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
 `;
 
 const TextBlock = styled.div`
@@ -42,6 +47,24 @@ const TextBlock = styled.div`
 
   @media (max-width: 1500px) {
     margin-left: 3rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 70%;
+  }
+
+  @media (max-width: 400px) {
+    width: 60%;
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 300px) {
+    width: 70%;
+    margin-left: 0.5rem;
+  }
+
+  @media (max-width: 200px) {
+    width: 73%;
   }
 `;
 
@@ -80,9 +103,13 @@ const Title = styled.h1`
     font-size: 2.7rem;
   }
 
+  @media (max-width: 400px) {
+    font-size: 2.2rem;
+  }
+
   @media (max-width: 200px) {
-    font-size: 1.7rem;
-    padding-top: 3rem;
+    font-size: 1.4rem;
+    padding-top: 0.5rem;
   }
 `;
 
@@ -104,7 +131,7 @@ const P = styled.p`
   }
 
   @media (max-width: 700px) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   @media (max-width: 600px) {
@@ -113,6 +140,10 @@ const P = styled.p`
 
   @media (max-width: 500px) {
     font-size: 1.3rem;
+  }
+
+  @media (max-width: 300px) {
+    font-size: 1.2rem;
   }
 
   @media (max-width: 200px) {
@@ -156,13 +187,14 @@ const Button = styled.button`
 
   @media (max-width: 700px) {
     margin-left: 40%;
+    margin-top: 3rem;
     font-size: 1.5rem;
     height: 3rem;
     width: 10rem;
   }
 
   @media (max-width: 600px) {
-    margin-left: 35%;
+    margin-left: 50%;
     font-size: 1.4rem;
     width: 9rem;
     height: 2.7rem;
@@ -172,6 +204,16 @@ const Button = styled.button`
     margin-left: 37%;
     font-size: 1.2rem;
     width: 9rem;
+  }
+
+  @media (max-width: 400px) {
+    margin-left: 45%;
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+
+  @media (max-width: 400px) {
+    margin-left: 25%;
   }
 
   @media (max-width: 200px) {
@@ -216,6 +258,30 @@ const Img = styled.img`
     height: 20rem;
     margin-right: -4rem;
     margin-top: 9rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 30rem;
+    height: 20rem;
+    margin: auto;
+  }
+
+  @media (max-width: 400px) {
+    width: 25rem;
+    height: 20rem;
+    margin: auto;
+  }
+
+  @media (max-width: 300px) {
+    width: 18rem;
+    height: 13rem;
+    margin: auto;
+  }
+
+  @media (max-width: 200px) {
+    width: 13rem;
+    height: 10rem;
+    margin: auto auto -5rem auto;
   }
 `;
 

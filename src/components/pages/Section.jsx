@@ -10,7 +10,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  border-radius: 2%;
   background-color: #eff1f7;
   text-align: center;
   margin-top: -2rem;
@@ -60,6 +59,10 @@ const Header = styled.h1`
   @media (max-width: 500px) {
     font-size: 2.4rem;
   }
+
+  @media (max-width: 200px) {
+    font-size: 2rem;
+  }
 `;
 
 const P = styled.p`
@@ -98,6 +101,10 @@ const P = styled.p`
     width: 80%;
     margin: auto;
   }
+
+  @media (max-width: 200px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -123,6 +130,15 @@ const Wrapper = styled.div`
   @media (max-width: 800px) {
     display: flex;
     flex-direction: row;
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 200px) {
+    margin-bottom: -5rem;
   }
 `;
 
@@ -162,6 +178,8 @@ const SubContainer = styled.div`
 
   @media (max-width: 700px) {
     font-size: 1.4rem;
+    margin: auto auto 5rem auto;
+    max-width: 60%;
   }
 
   @media (max-width: 600px) {
@@ -172,6 +190,10 @@ const SubContainer = styled.div`
   @media (max-width: 500px) {
     font-size: 1.1rem;
     max-width: 70%;
+  }
+
+  @media (max-width: 300px) {
+    max-width: 80%;
   }
 `;
 

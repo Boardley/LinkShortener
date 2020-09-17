@@ -9,7 +9,7 @@ const Container = styled.div`
   text-align: center;
   margin-left: -1rem;
   padding-top: 35%;
-  width: 105vw;
+  width: 100vw;
   height: 20vh;
   background-color: hsl(257, 27%, 26%);
   background-position: center; /* Center the image */
@@ -19,10 +19,14 @@ const Container = styled.div`
   @media (max-width: 2000px) {
     height: 2rem;
   }
+
+  @media (max-width: 500px) {
+    height: 14rem;
+  }
 `;
 
 const Title = styled.h1`
-     font-size: 1rem;
+    font-size: 1rem;
     margin: auto;
 
     @media (max-width: 2000px) {
@@ -45,19 +49,19 @@ const Title = styled.h1`
 
     @media (max-width: 800px) {
     font-size: 2.5rem;
-    margin-top: -8rem;
+    margin-top: -12rem;
     margin-bottom: 1.7rem;
   }
 
     @media (max-width: 700px) {
       font-size: 2.2rem;
-      margin-top: -6rem;
+      margin-top: -11rem;
       margin-bottom: 1.7rem;
   }
 
     @media (max-width: 600px) {
     font-size: 2rem;
-    margin-top: -6rem;
+    margin-top: -10rem;
     margin-bottom: 2rem;
   }
 
@@ -66,8 +70,13 @@ const Title = styled.h1`
     margin-top: -48.567px;
   }
 
+  @media (max-width: 300px) {
+    font-size: 1.6rem;   
+    margin-top: 16.433px;
+  }
+
   @media (max-width: 200px) {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: auto;
   }
 }
@@ -134,7 +143,7 @@ const Button = styled.button`
     font-size: 1rem;
     height: 2.5rem;
     width: 7rem;
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
 `;
 
