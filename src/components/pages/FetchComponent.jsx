@@ -2,12 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Section from "./Section";
-/* import styled from "styled-components";
- */
-/* import formImage from "../../images/formImage.svg";
- */
-/* import { PageLayout } from "../common/PageLayout";
- */
+import styled from "styled-components";
+
+import boostDesktop from "../../images/boostDesktop.svg";
+
 /* Saving in Local Storage */
 const SaveDataToLocalStorage = (data) => {
   let a = [];
@@ -81,52 +79,250 @@ const FetchComponent = () => {
       });
   };
 
+  const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #eff1f7;
+    width: 100vw;
+
+    @media (max-width: 700px) {
+      width: 101vw;
+    }
+  `;
+
+  const Form = styled.div`
+    display: flex;
+    background-color: hsl(257, 27%, 26%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    width: 70vw;
+    padding: 1rem;
+    margin-top: -6rem;
+
+    @media (max-width: 2000px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 10rem;
+    }
+
+    @media (max-width: 1500px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 1000px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      width: 89vw;
+      padding: 1rem;
+      height: 8rem;
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      width: 85%;
+    }
+
+    @media (max-width: 500px) {
+      width: 80%;
+      border-radius: 0.5rem;
+    }
+  `;
+
+  const Input = styled.input`
+    font-size: 0.7rem;
+    min-width: 80%;
+    max-width: 80%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 2000px) {
+      font-size: 1.4rem;
+      height: 3rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
+
+    @media (max-width: 1500px) {
+      font-size: 1.2rem;
+      height: 2rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 1.2rem;
+      height: 2rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
+
+    @media (max-width: 800px) {
+      font-size: 1.2rem;
+      height: 2rem;
+      margin: auto;
+      min-width: 70%;
+      max-width: 70%;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.2rem;
+      min-width: 90%;
+      max-width: 90%;
+      height: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
+      min-width: 90%;
+      max-width: 90%;
+      padding: 1rem;
+      border-radius: 0.3rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1rem;
+      min-width: 90%;
+      max-width: 90%;
+      padding: 1rem;
+      border-radius: 0.3rem;
+    }
+  `;
+
+  const Button = styled.button`
+    font-size: 1rem;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    max-width: 90%;
+    min-width: 90%;
+    padding: 0.6rem;
+    align-content: center;
+    margin-bottom: 0.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @media (max-width: 2000px) {
+      font-size: 1.5rem;
+      height: 4.1rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
+    }
+
+    @media (max-width: 1500px) {
+      height: 3.2rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
+    }
+
+    @media (max-width: 1000px) {
+      height: 3.2rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
+    }
+
+    @media (max-width: 800px) {
+      height: 3.2rem;
+      max-width: 20%;
+      min-width: 20%;
+      margin: auto;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 1.7rem;
+      max-width: 93%;
+      min-width: 93%;
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+      max-width: 98%;
+      min-width: 98%;
+      padding: 0.7rem;
+      margin-top: 0.5rem;
+      border-radius: 0.3rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.5rem;
+      max-width: 98%;
+      min-width: 98%;
+      padding: 1rem;
+      border-radius: 0.3rem;
+    }
+  `;
+
   return (
-    <div>
-      <form
-        /*  style={{ backgroundImage: `url(${formImage})` }} */
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <input
-          name="linkShortener"
-          placeholder="Shorten Link Here..."
-          type="text"
-          ref={register({ required: true })}
-        />
+    <>
+      <Container>
+        <Form
+          style={{ backgroundImage: `url(${boostDesktop})` }}
+          onSubmit={handleSubmit(onSubmit)}
+        >
+          <Input
+            name="linkShortener"
+            placeholder="Shorten Link Here..."
+            type="text"
+            ref={register({ required: true })}
+          />
 
-        <button type="submit"> Shorten it! </button>
-        {loading && (
-          <div className="text-color">Shortening Your Long Link...</div>
-        )}
+          <Button type="submit"> Shorten it! </Button>
+          {loading && (
+            <div className="text-color">Shortening Your Long Link...</div>
+          )}
 
-        {errors.linkShortener && (
-          <div className="error-text">Please add a link</div>
-        )}
-      </form>
+          {errors.linkShortener && (
+            <div className="error-text">Please add a link</div>
+          )}
+        </Form>
 
-      <div>
-        {links.map((data) => {
-          return (
-            <div>
-              <p>{data.url.toString().substr(0, 20)}...</p>
-
+        <div>
+          {links.map((data) => {
+            return (
               <div>
-                <div>{data.shortenUrl}</div>
+                <p>{data.url.toString().substr(0, 20)}...</p>
 
                 <div>
-                  {data.shortenUrl && (
-                    <CopyToClipboard text={data.shortenUrl}>
-                      <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
-                    </CopyToClipboard>
-                  )}
+                  <div>{data.shortenUrl}</div>
+
+                  <div>
+                    {data.shortenUrl && (
+                      <CopyToClipboard text={data.shortenUrl}>
+                        <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
+                      </CopyToClipboard>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </Container>
       <Section />
-    </div>
+    </>
   );
 };
 export default FetchComponent;

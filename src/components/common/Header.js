@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const HeaderWrapper = styled.header`
@@ -22,6 +22,7 @@ const MobileMenuIcon = styled.div`
     height: 3px;
     margin: 5px 0;
     width: 100%;
+    background-color: grey;
   }
 
   @media (min-width: 768px) {
@@ -29,19 +30,14 @@ const MobileMenuIcon = styled.div`
   }
 `;
 
-const Menu1 = styled.div`
-  text-align: center;
-`;
-
-const StyledLink1 = styled.div`
-  text-align: center;
-`;
-
 const Menu = styled.nav`
   display: ${(props) => (props.open ? "block" : "none")};
-
+  background-color: hsl(257, 27%, 26%);
+  color: white;
+  font-weight: 550;
+  border-radius: 0.3rem;
   position: absolute;
-  width: 100%;
+  width: 90%;
   top: 60px;
   left: 0;
   padding: 8px;
@@ -56,10 +52,39 @@ const Menu = styled.nav`
     position: relative;
     width: initial;
     border-bottom: none;
+
+    border: pink dotted 0.2rem;
+    color: black;
+    width: 100%;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.6rem;
+    margin-left: 3%;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 1.4rem;
+    margin-left: 3%;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.3rem;
+    margin-left: 3%;
   }
 `;
 
 const StyledLink = styled.a`
+  padding: 4px 8px 1rem 0;
+  display: block;
+  text-align: center;
+  box-sizing: border-box;
+  margin: auto 0;
+`;
+
+const SignUp = styled.a`
+  background-color: hsl(180, 66%, 49%);
+  border-radius: 0.3rem;
   padding: 4px 8px;
   display: block;
   text-align: center;
@@ -78,18 +103,16 @@ export function Header() {
         <div />
       </MobileMenuIcon>
 
-      <Menu1 open={menuOpen}>
-        <StyledLink1>Features</StyledLink1>
+      <Menu open={menuOpen}>
+        <StyledLink>Features</StyledLink>
 
         <StyledLink>Pricing</StyledLink>
 
         <StyledLink>Resources</StyledLink>
-      </Menu1>
 
-      <Menu open={menuOpen}>
         <StyledLink>Login</StyledLink>
 
-        <StyledLink>Sign Up</StyledLink>
+        <SignUp>Sign Up</SignUp>
       </Menu>
     </HeaderWrapper>
   );
