@@ -47,7 +47,7 @@ const Container = styled.div`
 
   @media (max-width: 768px) {
     width: 109vw;
-    height: 60vh;
+    height: 100vh;
   }
 
   @media (max-width: 700px) {
@@ -100,7 +100,7 @@ const Container = styled.div`
   @media (max-width: 200px) {
     text-align: center;
     margin-left: -1rem;
-    width: 105vw;
+    width: 130vw;
     height: 120vh;
     padding-bottom: 1rem;
   }

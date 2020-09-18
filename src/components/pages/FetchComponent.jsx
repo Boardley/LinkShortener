@@ -49,6 +49,8 @@ const FetchComponent = () => {
   const CORSURL = "https://cors-anywhere.herokuapp.com/";
 
   const onSubmit = (data) => {
+    console.log(data);
+
     setLoading(true);
 
     const raw = JSON.stringify({
@@ -138,7 +140,7 @@ const FetchComponent = () => {
     }
   `;
 
-  const Form = styled.div`
+  const Form = styled.form`
     display: flex;
     background-color: hsl(257, 27%, 26%);
     background-position: center;

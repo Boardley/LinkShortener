@@ -9,7 +9,6 @@ const HeaderWrapper = styled.header`
   box-sizing: border-box;
   display: flex;
   padding: 0 16px;
-  /* position: fixed; */
   top: 0;
 
   @media (min-width: 768px) {
@@ -70,24 +69,34 @@ const Menu = styled.nav`
     color: black;
     left: initial;
     top: initial;
-    margin: 1rem 0 auto auto;
+    margin: auto;
     position: relative;
-    width: initial;
     border-bottom: none;
     width: 100%;
   }
 
+  @media (max-width: 760px) {
+    flex-direction: column;
+    display: ${(props) => (props.open ? "block" : "none")};
+  }
+
   @media (max-width: 700px) {
+    flex-direction: column;
+    display: ${(props) => (props.open ? "block" : "none")};
     font-size: 1.6rem;
+    margin-top: 2rem;
     margin-left: 3%;
   }
 
   @media (max-width: 600px) {
+    display: ${(props) => (props.open ? "block" : "none")};
     font-size: 1.4rem;
     margin-left: 3%;
   }
 
   @media (max-width: 540px) {
+    display: ${(props) => (props.open ? "block" : "none")};
+
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -95,6 +104,8 @@ const Menu = styled.nav`
   }
 
   @media (max-width: 500px) {
+    display: ${(props) => (props.open ? "block" : "none")};
+
     font-size: 1.3rem;
     margin-left: 3%;
   }
@@ -112,6 +123,7 @@ const Img = styled.img`
 
   @media (max-width: 800px) {
     width: 8rem;
+    margin: 1.5rem auto auto auto;
   }
 
   @media (max-width: 700px) {
@@ -161,6 +173,10 @@ const StyledLink = styled.a`
 
   @media (max-width: 1024px) {
     margin-top: 1.1rem;
+  }
+
+  @media (max-width: 760px) {
+    color: white;
   }
 `;
 

@@ -240,11 +240,12 @@ const Button = styled.button`
   }
 
   @media (max-width: 200px) {
-    font-size: 1rem;
-    height: 2.5rem;
+    height: 3rem;
+    width: 100%;
     margin-top: 0.5rem;
     margin-left: 18%;
     font-weight: 600;
+    font-size: 1.1rem;
   }
 `;
 
