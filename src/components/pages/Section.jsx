@@ -22,10 +22,39 @@ const Container = styled.div`
     padding-bottom: 6rem;
   }
 
+  @media (max-width: 1024px) {
+    width: 106vw;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 108vw;
+  }
+
   @media (max-width: 700px) {
     display: flex;
     flex-direction: row;
     width: 101vw;
+  }
+
+  @media (max-width: 540px) {
+    width: 103vw;
+  }
+
+  @media (max-width: 414px) {
+    width: 117.5vw;
+  }
+
+  @media (max-width: 411px) {
+    width: 118.3vw;
+  }
+
+  @media (max-width: 360px) {
+    width: 113vw;
+  }
+
+  @media (max-width: 320px) {
+    width: 126.5vw;
   }
 `;
 
@@ -38,6 +67,10 @@ const Header = styled.h1`
 
   @media (max-width: 1500px) {
     font-size: 3.3rem;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 4rem;
   }
 
   @media (max-width: 1000px) {
@@ -74,6 +107,10 @@ const P = styled.p`
 
   @media (max-width: 1500px) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 2rem;
   }
 
   @media (max-width: 1000px) {
@@ -122,6 +159,11 @@ const Wrapper = styled.div`
     justify-content: space-evenly;
   }
 
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (max-width: 1000px) {
     display: flex;
     flex-direction: row;
@@ -130,6 +172,11 @@ const Wrapper = styled.div`
   @media (max-width: 800px) {
     display: flex;
     flex-direction: row;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 700px) {
@@ -162,6 +209,13 @@ const SubContainer = styled.div`
     padding: 0.5rem;
   }
 
+  @media (max-width: 1024px) {
+    font-size: 2rem;
+    margin: 5rem auto 5rem auto;
+    min-width: 60%;
+    min-height: 100%;
+  }
+
   @media (max-width: 1000px) {
     max-width: 40%;
     font-size: 1.1rem;
@@ -174,6 +228,10 @@ const SubContainer = styled.div`
     font-size: 1.1rem;
     margin: 0.5rem;
     padding: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 5rem auto 5rem auto;
   }
 
   @media (max-width: 700px) {

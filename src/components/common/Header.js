@@ -34,6 +34,13 @@ const MobileMenuIcon = styled.div`
 
   @media (min-width: 768px) {
     display: none;
+
+    > div {
+      height: 3px;
+      margin: 5px 0;
+      width: 100%;
+      background-color: grey;
+    }
   }
 `;
 
@@ -49,6 +56,13 @@ const Menu = styled.nav`
   left: 0;
   padding: 8px;
   box-sizing: border-box;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    font-size: 1.3rem;
+  }
 
   @media (min-width: 768px) {
     display: flex;
@@ -73,9 +87,21 @@ const Menu = styled.nav`
     margin-left: 3%;
   }
 
+  @media (max-width: 540px) {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3rem auto auto 4rem;
+  }
+
   @media (max-width: 500px) {
     font-size: 1.3rem;
     margin-left: 3%;
+  }
+
+  @media (max-width: 280px) {
+    width: 100%;
+    margin: 3rem auto auto 2rem;
   }
 `;
 
@@ -132,6 +158,10 @@ const StyledLink = styled.a`
   text-align: center;
   box-sizing: border-box;
   margin: auto;
+
+  @media (max-width: 1024px) {
+    margin-top: 1.1rem;
+  }
 `;
 
 const SignUp = styled.a`

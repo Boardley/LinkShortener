@@ -24,6 +24,10 @@ const Container = styled.div`
     width: 101.5vw;
   }
 
+  @media (max-width: 1024px) {
+    width: 106vw;
+  }
+
   @media (max-width: 1000px) {
     width: 101.5vw;
   }
@@ -36,6 +40,10 @@ const Container = styled.div`
     width: 101.5vw;
   }
 
+  @media (max-width: 768px) {
+    width: 109vw;
+  }
+
   @media (max-width: 700px) {
     width: 101.5vw;
   }
@@ -44,9 +52,34 @@ const Container = styled.div`
     width: 101.5vw;
   }
 
+  @media (max-width: 540px) {
+    width: 104vw;
+  }
+
   @media (max-width: 500px) {
     height: 14rem;
     width: 101.5vw;
+  }
+
+  @media (max-width: 414px) {
+    width: 119vw;
+  }
+
+  @media (max-width: 411px) {
+    width: 120vw;
+  }
+
+  @media (max-width: 360px) {
+    height: 14rem;
+    width: 115vw;
+  }
+
+  @media (max-width: 320px) {
+    width: 128vw;
+  }
+
+  @media (max-width: 280px) {
+    width: 130vw;
   }
 `;
 

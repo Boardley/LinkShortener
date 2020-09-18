@@ -31,6 +31,11 @@ const Container = styled.div`
     height: 80vh;
   }
 
+  @media (max-width: 1024px) {
+    width: 106vw;
+    height: 50vh;
+  }
+
   @media (max-width: 1000px) {
     font-size: 1.2rem;
   }
@@ -38,6 +43,11 @@ const Container = styled.div`
   @media (max-width: 800px) {
     font-size: 1.2rem;
     height: 70vh;
+  }
+
+  @media (max-width: 768px) {
+    width: 109vw;
+    height: 60vh;
   }
 
   @media (max-width: 700px) {
@@ -48,14 +58,43 @@ const Container = styled.div`
     width: 102vw;
   }
 
+  @media (max-width: 540px) {
+    width: 104vw;
+    height: 100vh;
+  }
+
   @media (max-width: 500px) {
     font-size: 1.1rem;
     height: 110vh;
   }
 
+  @media (max-width: 414px) {
+    width: 119vw;
+    height: 150vh;
+  }
+
+  @media (max-width: 411px) {
+    height: 150vh;
+    width: 120vw;
+  }
+
+  @media (max-width: 360px) {
+    height: 150vh;
+    width: 115vw;
+  }
+
+  @media (max-width: 320px) {
+    width: 128.5vw;
+  }
+
   @media (max-width: 300px) {
     height: 110vh;
     width: 103vw;
+  }
+
+  @media (max-width: 280px) {
+    width: 130vw;
+    height: 140vh;
   }
 
   @media (max-width: 200px) {

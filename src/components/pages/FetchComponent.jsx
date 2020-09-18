@@ -93,12 +93,44 @@ const FetchComponent = () => {
       margin-left: -1rem;
     }
 
+    @media (max-width: 1024px) {
+      width: 106.5vw;
+    }
+
+    @media (max-width: 768px) {
+      width: 109.1vw;
+    }
+
     @media (max-width: 700px) {
       width: 101vw;
     }
 
+    @media (max-width: 540px) {
+      width: 104.4vw;
+    }
+
+    @media (max-width: 414px) {
+      width: 119vw;
+    }
+
+    @media (max-width: 411px) {
+      width: 120.5vw;
+    }
+
+    @media (max-width: 360px) {
+      width: 115.2vw;
+    }
+
+    @media (max-width: 320px) {
+      width: 129vw;
+    }
+
     @media (max-width: 300px) {
       width: 103vw;
+    }
+
+    @media (max-width: 280px) {
+      width: 130vw;
     }
   `;
 
@@ -161,6 +193,7 @@ const FetchComponent = () => {
     min-width: 80%;
     max-width: 80%;
     padding: 0.5rem;
+    border: none;
     border-radius: 0.3rem;
     margin-bottom: 0.5rem;
 
@@ -318,6 +351,10 @@ const FetchComponent = () => {
     }
   `;
 
+  const Shortening = styled.div`
+    color: red;
+  `;
+
   return (
     <>
       <Container>
@@ -334,7 +371,9 @@ const FetchComponent = () => {
 
           <Button type="submit"> Shorten it! </Button>
           {loading && (
-            <div className="text-color">Shortening Your Long Link...</div>
+            <Shortening className="text-color">
+              Shortening Your Long Link...
+            </Shortening>
           )}
 
           {errors.linkShortener && (

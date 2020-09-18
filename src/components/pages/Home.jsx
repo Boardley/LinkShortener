@@ -90,6 +90,11 @@ const Title = styled.h1`
     width: 70%;
   }
 
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+    width: 80%;
+  }
+
   @media (max-width: 1000px) {
     font-size: 3rem;
     width: 100%;
@@ -129,6 +134,10 @@ const P = styled.p`
 
   @media (max-width: 1500px) {
     font-size: 1.4rem;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 1.6rem;
   }
 
   @media (max-width: 1000px) {
@@ -221,14 +230,18 @@ const Button = styled.button`
     width: 10rem;
   }
 
-  @media (max-width: 400px) {
-    margin-left: 25%;
+  @media (max-width: 320px) {
+    height: 10%;
+  }
+
+  @media (max-width: 280px) {
+    padding: 1rem;
+    width: 100%;
   }
 
   @media (max-width: 200px) {
     font-size: 1rem;
     height: 2.5rem;
-    width: 7rem;
     margin-top: 0.5rem;
     margin-left: 18%;
     font-weight: 600;
@@ -252,6 +265,13 @@ const Img = styled.img`
     width: 46rem;
     height: 30rem;
     margin-right: -4rem;
+    margin-top: 9rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 30rem;
+    height: 20rem;
+    margin-right: -3rem;
     margin-top: 9rem;
   }
 
