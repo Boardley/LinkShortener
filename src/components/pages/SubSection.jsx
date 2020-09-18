@@ -20,8 +20,33 @@ const Container = styled.div`
     height: 2rem;
   }
 
+  @media (max-width: 1500px) {
+    width: 101.5vw;
+  }
+
+  @media (max-width: 1000px) {
+    width: 101.5vw;
+  }
+
+  @media (max-width: 900px) {
+    width: 101.5vw;
+  }
+
+  @media (max-width: 800px) {
+    width: 101.5vw;
+  }
+
+  @media (max-width: 700px) {
+    width: 101.5vw;
+  }
+
+  @media (max-width: 600px) {
+    width: 101.5vw;
+  }
+
   @media (max-width: 500px) {
     height: 14rem;
+    width: 101.5vw;
   }
 `;
 

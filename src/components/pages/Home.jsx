@@ -53,6 +53,15 @@ const TextBlock = styled.div`
     width: 70%;
   }
 
+  @media (max-width: 600px) {
+    width: 60%;
+  }
+
+  @media (max-width: 500px) {
+    width: 60%;
+    margin-left: 1rem;
+  }
+
   @media (max-width: 400px) {
     width: 60%;
     margin-left: 1rem;

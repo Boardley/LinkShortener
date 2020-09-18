@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import logo from "../../images/logo.svg";
 
 const HeaderWrapper = styled.header`
   font-family: "Poppins", sans-serif;
@@ -8,8 +9,14 @@ const HeaderWrapper = styled.header`
   box-sizing: border-box;
   display: flex;
   padding: 0 16px;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
+
+  @media (min-width: 768px) {
+    height: 10vh;
+    margin: auto auto auto -0.5rem;
+    position: absolute;
+  }
 `;
 
 const MobileMenuIcon = styled.div`
@@ -46,15 +53,13 @@ const Menu = styled.nav`
   @media (min-width: 768px) {
     display: flex;
     background: none;
+    color: black;
     left: initial;
     top: initial;
-    margin: auto 0 auto auto;
+    margin: 1rem 0 auto auto;
     position: relative;
     width: initial;
     border-bottom: none;
-
-    border: pink dotted 0.2rem;
-    color: black;
     width: 100%;
   }
 
@@ -74,22 +79,70 @@ const Menu = styled.nav`
   }
 `;
 
+const Img = styled.img`
+  width: 7rem;
+  height: 2.5rem;
+  margin: auto auto auto 1rem;
+
+  @media (max-width: 800px) {
+    width: 8rem;
+  }
+
+  @media (max-width: 700px) {
+    width: 7.5rem;
+    height: 2.3rem;
+    margin: auto auto auto 2rem;
+  }
+
+  @media (max-width: 600px) {
+    width: 7.5rem;
+    height: 2.3rem;
+    margin: auto auto auto 0.5rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 7.5rem;
+    height: 2.3rem;
+    margin: auto auto auto 0.5rem;
+  }
+
+  @media (max-width: 400px) {
+    width: 7.5rem;
+    height: 2.3rem;
+    margin: auto auto auto -0.5rem;
+  }
+
+  @media (max-width: 300px) {
+    width: 7rem;
+    height: 2rem;
+    margin: auto auto auto -0.5rem;
+  }
+
+  @media (max-width: 200px) {
+    width: 6rem;
+    height: 2rem;
+    margin: auto auto auto -1rem;
+  }
+`;
+
 const StyledLink = styled.a`
+  color: hsl(0, 0%, 75%);
   padding: 4px 8px 1rem 0;
   display: block;
   text-align: center;
   box-sizing: border-box;
-  margin: auto 0;
+  margin: auto;
 `;
 
 const SignUp = styled.a`
   background-color: hsl(180, 66%, 49%);
-  border-radius: 0.3rem;
+  color: white;
+  border-radius: 3rem;
   padding: 4px 8px;
   display: block;
   text-align: center;
   box-sizing: border-box;
-  margin: auto 0;
+  margin: auto;
 `;
 
 export function Header() {
@@ -97,6 +150,8 @@ export function Header() {
 
   return (
     <HeaderWrapper>
+      <Img src={logo} alt="logo" />
+
       <MobileMenuIcon onClick={() => setMenuOpen((s) => !s)}>
         <div />
         <div />
@@ -105,13 +160,9 @@ export function Header() {
 
       <Menu open={menuOpen}>
         <StyledLink>Features</StyledLink>
-
         <StyledLink>Pricing</StyledLink>
-
         <StyledLink>Resources</StyledLink>
-
         <StyledLink>Login</StyledLink>
-
         <SignUp>Sign Up</SignUp>
       </Menu>
     </HeaderWrapper>
