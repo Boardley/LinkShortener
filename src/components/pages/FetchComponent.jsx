@@ -88,6 +88,10 @@ const FetchComponent = () => {
     width: 100vw;
     margin-left: -1rem;
 
+    @media (max-width: 2000px) {
+      width: 103.5vw;
+    }
+
     @media (max-width: 1500px) {
       width: 101vw;
       margin-left: -1rem;

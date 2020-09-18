@@ -19,6 +19,7 @@ const Container = styled.div`
   margin-left: -0.5rem;
 
   @media (max-width: 2000px) {
+    width: 102.9vw;
     padding-bottom: 6rem;
   }
 
