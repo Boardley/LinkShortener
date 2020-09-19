@@ -85,7 +85,8 @@ const Menu = styled.nav`
     display: ${(props) => (props.open ? "block" : "none")};
     font-size: 1.6rem;
     margin-top: 2rem;
-    margin-left: 3%;
+    margin-left: 10%;
+    width: 80%;
   }
 
   @media (max-width: 600px) {

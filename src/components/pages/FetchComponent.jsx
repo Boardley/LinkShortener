@@ -83,7 +83,8 @@ const FetchComponent = () => {
 
   const Container = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     font-family: "Poppins", sans-serif;
     text-align: center;
     background-color: #eff1f7;
@@ -108,7 +109,7 @@ const FetchComponent = () => {
     }
 
     @media (max-width: 700px) {
-      width: 101vw;
+      width: 112vw;
     }
 
     @media (max-width: 540px) {
@@ -132,7 +133,7 @@ const FetchComponent = () => {
     }
 
     @media (max-width: 300px) {
-      width: 103vw;
+      width: 130vw;
     }
 
     @media (max-width: 280px) {
@@ -183,9 +184,19 @@ const FetchComponent = () => {
       width: 85%;
     }
 
+    @media (max-width: 600px) {
+      width: 85%;
+      margin-left: 2rem;
+    }
+
     @media (max-width: 500px) {
       width: 80%;
       border-radius: 0.5rem;
+    }
+
+    @media (max-width: 300px) {
+      width: 80%;
+      margin: auto;
     }
 
     @media (max-width: 200px) {
@@ -326,10 +337,10 @@ const FetchComponent = () => {
     }
 
     @media (max-width: 600px) {
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       max-width: 98%;
       min-width: 98%;
-      padding: 0.7rem;
+      /* padding: 0.7rem; */
       margin-top: 0.5rem;
       border-radius: 0.3rem;
     }
@@ -357,8 +368,76 @@ const FetchComponent = () => {
     }
   `;
 
-  const Shortening = styled.div`
+  const ShorteningText = styled.div`
+    color: white;
+    font-weight: 500;
+    font-size: 1.7rem;
+  `;
+
+  const ErrorText = styled.div`
     color: red;
+    font-weight: 500;
+    font-size: 1.7em;
+  `;
+
+  const ResultContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    border-radius: 0.3rem;
+    background-color: white;
+    width: 80%;
+    margin: 1rem;
+    padding: 1rem;
+
+    @media (max-width: 800px) {
+      padding: 1.2rem;
+      width: 85%;
+      margin: 3rem auto 3rem auto;
+    }
+
+    @media (max-width: 600px) {
+      padding: 1.2rem;
+      width: 85%;
+      margin: 3rem auto 3rem auto;
+    }
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      padding: 1.2rem;
+      width: 85%;
+      margin: 3rem auto 3rem auto;
+    }
+
+    @media (max-width: 200px) {
+      padding: 1.2rem;
+      width: 80%;
+      margin: 3rem auto 3rem auto;
+    }
+  `;
+
+  const ResultText = styled.div`
+    color: hsl(180, 66%, 49%);
+  `;
+
+  const CopyButton = styled.button`
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: hsl(180, 66%, 49%);
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 1rem;
+    margin-top: 0.7rem;
+
+    @media (max-width: 200px) {
+      width: 50%;
+      padding: 0.7rem;
+      margin-top: 0.7rem;
+    }
   `;
 
   return (
@@ -377,34 +456,37 @@ const FetchComponent = () => {
 
           <Button type="submit"> Shorten it! </Button>
           {loading && (
-            <Shortening className="text-color">
+            <ShorteningText className="text-color">
               Shortening Your Long Link...
-            </Shortening>
+            </ShorteningText>
           )}
 
           {errors.linkShortener && (
-            <div className="error-text">Please add a link</div>
+            <ErrorText className="error-text">Please add a link</ErrorText>
           )}
         </Form>
 
         <div>
           {links.map((data) => {
             return (
-              <div>
+              <ResultContainer>
                 <p>{data.url.toString().substr(0, 20)}...</p>
 
                 <div>
-                  <div>{data.shortenUrl}</div>
+                  <ResultText>{data.shortenUrl}</ResultText>
 
                   <div>
                     {data.shortenUrl && (
                       <CopyToClipboard text={data.shortenUrl}>
-                        <i className="text-color jello-horizontal copy-icon fas fa-copy"></i>
+                        <CopyButton /* className="text-color jello-horizontal copy-icon fas fa-copy" */
+                        >
+                          Copy
+                        </CopyButton>
                       </CopyToClipboard>
                     )}
                   </div>
                 </div>
-              </div>
+              </ResultContainer>
             );
           })}
         </div>

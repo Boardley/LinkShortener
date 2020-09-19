@@ -42,7 +42,7 @@ const Container = styled.div`
 
   @media (max-width: 800px) {
     font-size: 1.2rem;
-    height: 70vh;
+    height: 100vh;
   }
 
   @media (max-width: 768px) {
@@ -52,6 +52,7 @@ const Container = styled.div`
 
   @media (max-width: 700px) {
     font-size: 1.2rem;
+    width: 112vw;
   }
 
   @media (max-width: 600px) {

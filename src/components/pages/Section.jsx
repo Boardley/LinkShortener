@@ -35,7 +35,7 @@ const Container = styled.div`
   @media (max-width: 700px) {
     display: flex;
     flex-direction: row;
-    width: 101vw;
+    width: 111vw;
   }
 
   @media (max-width: 540px) {
@@ -172,7 +172,9 @@ const Wrapper = styled.div`
 
   @media (max-width: 800px) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 3rem auto 5rem auto;
+    align-items: center;
   }
 
   @media (max-width: 768px) {
@@ -227,7 +229,7 @@ const SubContainer = styled.div`
   @media (max-width: 800px) {
     max-width: 40%;
     font-size: 1.1rem;
-    margin: 0.5rem;
+    margin: 2.5rem;
     padding: 0.5rem;
   }
 
