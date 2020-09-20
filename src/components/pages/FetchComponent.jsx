@@ -421,6 +421,15 @@ const FetchComponent = () => {
     color: hsl(180, 66%, 49%);
   `;
 
+  const ResultTextWrapper = styled.div`
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: auto;
+    }
+  `;
+
   const CopyButton = styled.button`
     color: white;
     font-size: 1rem;
@@ -472,7 +481,7 @@ const FetchComponent = () => {
               <ResultContainer>
                 <p>{data.url.toString().substr(0, 20)}...</p>
 
-                <div>
+                <ResultTextWrapper>
                   <ResultText>{data.shortenUrl}</ResultText>
 
                   <div>
@@ -485,7 +494,7 @@ const FetchComponent = () => {
                       </CopyToClipboard>
                     )}
                   </div>
-                </div>
+                </ResultTextWrapper>
               </ResultContainer>
             );
           })}

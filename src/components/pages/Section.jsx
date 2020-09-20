@@ -146,7 +146,9 @@ const P = styled.p`
 `;
 
 const Wrapper = styled.div`
-  margin-top: 6rem;
+  padding: 0.5rem;
+  max-width: 50%;
+  margin: auto;
 
   @media (max-width: 2000px) {
     display: flex;
