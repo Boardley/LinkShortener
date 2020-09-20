@@ -143,6 +143,7 @@ const FetchComponent = () => {
 
   const Form = styled.form`
     display: flex;
+    flex-wrap: wrap;
     background-color: hsl(257, 27%, 26%);
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +151,7 @@ const FetchComponent = () => {
     border-radius: 0.5rem;
     width: 70vw;
     padding: 1rem;
-    margin-top: -6rem;
+    margin: -4rem auto auto auto;
 
     @media (max-width: 2000px) {
       flex-direction: row;
@@ -180,7 +181,7 @@ const FetchComponent = () => {
     }
 
     @media (max-width: 700px) {
-      flex-direction: column;
+      flex-direction: row;
       width: 85%;
     }
 
@@ -369,15 +370,41 @@ const FetchComponent = () => {
   `;
 
   const ShorteningText = styled.div`
-    color: white;
     font-weight: 500;
-    font-size: 1.7rem;
+    font-size: 1.7em;
+    color: white;
+    text-align: left;
+
+    @media (max-width: 700px) {
+      margin: auto;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 200px) {
+      font-size: 1rem;
+    }
   `;
 
   const ErrorText = styled.div`
-    color: red;
-    font-weight: 500;
     font-size: 1.7em;
+    font-weight: 500;
+    text-align: left;
+    color: red;
+
+    @media (max-width: 700px) {
+      margin: auto;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 200px) {
+      font-size: 1rem;
+    }
   `;
 
   const ResultContainer = styled.div`
@@ -388,7 +415,7 @@ const FetchComponent = () => {
     border-radius: 0.3rem;
     background-color: white;
     width: 80%;
-    margin: 1rem;
+    margin: 2rem auto 2rem auto;
     padding: 1rem;
 
     @media (max-width: 800px) {
@@ -422,6 +449,14 @@ const FetchComponent = () => {
   `;
 
   const ResultTextWrapper = styled.div`
+    @media (max-width: 2000px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: auto;
+      width: auto;
+    }
+
     @media (max-width: 600px) {
       display: flex;
       flex-direction: column;

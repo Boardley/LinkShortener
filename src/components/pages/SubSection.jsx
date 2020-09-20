@@ -30,15 +30,15 @@ const Container = styled.div`
   }
 
   @media (max-width: 1000px) {
-    width: 101.5vw;
+    width: 106vw;
   }
 
   @media (max-width: 900px) {
-    width: 101.5vw;
+    width: 107vw;
   }
 
   @media (max-width: 800px) {
-    width: 101.5vw;
+    width: 108vw;
   }
 
   @media (max-width: 768px) {

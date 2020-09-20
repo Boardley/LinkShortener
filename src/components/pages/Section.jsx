@@ -147,8 +147,10 @@ const P = styled.p`
 
 const Wrapper = styled.div`
   padding: 0.5rem;
-  max-width: 50%;
+  /*  max-width: 50%; */
   margin: auto;
+  min-width: 90%;
+  max-width: 95%;
 
   @media (max-width: 2000px) {
     display: flex;
@@ -242,7 +244,7 @@ const SubContainer = styled.div`
   @media (max-width: 700px) {
     font-size: 1.4rem;
     margin: auto auto 5rem auto;
-    max-width: 60%;
+    max-width: 80%;
   }
 
   @media (max-width: 600px) {
