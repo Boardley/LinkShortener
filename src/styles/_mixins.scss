@@ -1,0 +1,34 @@
+//= Mixins - Media Query
+//-----------------------------
+$bp-1: 450px;
+$bp-2: 768px;
+$bp-3: 970px;
+$bp-4: 1170px;
+
+@mixin screen-xs {
+
+	@media (min-width: $bp-1) {
+		@content;
+	}
+}
+
+@mixin screen-sm {
+
+	@media (min-width: $bp-2) {
+		@content;
+	}
+}
+
+@mixin screen-md {
+  
+  @media (min-width: $bp-3) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  
+  @media (min-width: $bp-4) {
+    @content;
+  }
+}

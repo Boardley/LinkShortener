@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import logo from "../../images/logo.svg";
+import '../../styles/index.scss';
 
 const HeaderWrapper = styled.header`
   font-family: "Poppins", sans-serif;
